@@ -8,11 +8,10 @@ public class PlayerMovement : MonoBehaviour
     public GetLane getLane;
     public Waypoints pathToFollow;
     public ScriptableStats sS;
-    public Rigidbody rB;
 
     public int CurrentWaypoint = 0;
-    private float reachDistance = 1f;
-    public float rotationspeed = 0.01f;
+    public float reachDistance = 1f;
+    private float rotationspeed = 2f;
     public int currentLane = 1;
     public float speed;
     private float timeCount = 1.0f;
@@ -29,46 +28,49 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+      
         pathToFollow = getLane.lanes[currentLane].GetComponent<Waypoints>();
-        float distance = Vector3.Distance(pathToFollow.wayPoints[CurrentWaypoint].position, transform.position);
-
-        rB.position = Vector3.MoveTowards(transform.position, pathToFollow.wayPoints[CurrentWaypoint].position, Time.deltaTime * speed);
+        transform.position = Vector3.MoveTowards(transform.position, pathToFollow.wayPoints[CurrentWaypoint].position, Time.deltaTime * speed);
 
         #region Input
         if (Input.GetKeyDown(KeyCode.LeftArrow) && Time.time > lockOut)
         {
             if (currentLane == 2)
             {
-                if (speed >= 5.5)
-                {
+                // if (speed >= 5.5)
+                //  {             
                     lockOut = Time.time + timeCount;
                     pathToFollow = getLane.lanes[currentLane++].GetComponent<Waypoints>();
-                }
+                    LeanTween.rotate(gameObject, new Vector3(0, 180, 270), rotationspeed / speed);
+                //}
             }
             else if (currentLane == 5)
             {
-                lockOut = Time.time + timeCount;
-                if (speed >= 8)
-                {
+
+              //  if (speed >= 8)
+               // {
+                    LeanTween.rotate(gameObject, new Vector3(0, 180f, 180), rotationspeed / speed);
                     lockOut = Time.time + timeCount;
                     pathToFollow = getLane.lanes[currentLane++].GetComponent<Waypoints>();
-                }
+               // }
             }
             else if (currentLane == 8)
             {
-                if (speed >= 8)
-                {
+                //if (speed >= 8)
+               // {
+                    LeanTween.rotate(gameObject, new Vector3(0, 180f, 90f), rotationspeed / speed);
                     lockOut = Time.time + timeCount;
                     pathToFollow = getLane.lanes[currentLane++].GetComponent<Waypoints>();
-                }
+                //}
             }
             else if (currentLane == 11)
             {
-                if (speed >= 5.5)
-                {
+                //if (speed >= 5.5)
+                //{
+                    LeanTween.rotate(gameObject, new Vector3(0, 180f, 0f), (rotationspeed / speed));
                     lockOut = Time.time + timeCount;
                     currentLane = 0;
-                }
+               // }
             }
             else if (currentLane >= 0 && currentLane <= 1)
             {
@@ -92,36 +94,41 @@ public class PlayerMovement : MonoBehaviour
         {
             if (currentLane == 0)
             {
-                if (speed >= 5.5)
-                {
+               // if (speed >= 5.5)
+               // {
+                    LeanTween.rotate(gameObject, new Vector3(0, 180f, 90f), rotationspeed / speed);
                     lockOut = Time.time + timeCount;
-                    pathToFollow = getLane.lanes[currentLane--].GetComponent<Waypoints>();
-                }
+                    pathToFollow = getLane.lanes[11].GetComponent<Waypoints>();
+                    currentLane = 11;
+                //  }
             }
             else if (currentLane == 9)
             {
                 lockOut = Time.time + timeCount;
-                if (speed >= 8)
-                {
+               // if (speed >= 8)
+               // {
+                    LeanTween.rotate(gameObject, new Vector3(0, 180f, 180f), rotationspeed / speed);
                     lockOut = Time.time + timeCount;
                     pathToFollow = getLane.lanes[currentLane--].GetComponent<Waypoints>();
-                }
+                //}
             }
             else if (currentLane == 6)
             {
-                if (speed >= 8)
-                {
+               // if (speed >= 8)
+               // {
+                    LeanTween.rotate(gameObject, new Vector3(0, 180f, 270f), rotationspeed /speed);
                     lockOut = Time.time + timeCount;
                     pathToFollow = getLane.lanes[currentLane--].GetComponent<Waypoints>();
-                }
+               // }
             }
             else if (currentLane == 3)
             {
-                if (speed >= 5.5)
-                {
+                //if (speed >= 5.5)
+               // {
+                    LeanTween.rotate(gameObject, new Vector3(0, 180f, 0f), (rotationspeed / speed));
                     lockOut = Time.time + timeCount;
                     currentLane = 2;
-                }
+                //}
             }
             else if (currentLane >= 1 && currentLane <= 2)
             {
@@ -146,18 +153,6 @@ public class PlayerMovement : MonoBehaviour
         {
             speed += Time.deltaTime * sS.Acceleration;
         }
-
-        if (distance <= reachDistance)
-        {
-            CurrentWaypoint++;
-        }
-
-        if (CurrentWaypoint >= pathToFollow.wayPoints.Length)
-        {
-            CurrentWaypoint = 0;
-        }
-
-
     }
 }
 

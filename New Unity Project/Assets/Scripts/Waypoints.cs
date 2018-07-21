@@ -9,5 +9,6 @@ public class Waypoints : MonoBehaviour
     void Start()
     {
         wayPoints = GetComponentsInChildren<Transform>();
+       
     }
 }
