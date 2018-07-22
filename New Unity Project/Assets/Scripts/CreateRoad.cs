@@ -8,7 +8,10 @@ public class CreateRoad : MonoBehaviour
     public int tileLength;
     public GameObject Tile;
     public int PosZ = -21;
-    public void Start()
+
+
+
+    public void Awake()
     {
         for (int i = 0; i < tileLength; i++)
         {
