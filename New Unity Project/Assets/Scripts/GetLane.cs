@@ -19,3 +19,6 @@ public class GetLane : MonoBehaviour
         StopCoroutine("get");
     }
 }
+///<Summary>
+/// waits two seconds, then starts coroutine to identify lanes
+///</Summary>

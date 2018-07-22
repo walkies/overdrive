@@ -27,3 +27,10 @@ public class CameraAngle : MonoBehaviour
 
     }
 }
+///<Summary>
+/// transforms the camera to one of two positions based on keypress
+///</Summary>
+
+
+
+

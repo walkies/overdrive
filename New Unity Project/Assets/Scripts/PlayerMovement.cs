@@ -32,6 +32,11 @@ public class PlayerMovement : MonoBehaviour
         pathToFollow = getLane.lanes[currentLane].GetComponent<Waypoints>();
         transform.position = Vector3.MoveTowards(transform.position, pathToFollow.wayPoints[CurrentWaypoint].position, Time.deltaTime * speed);
 
+        ///<summary>
+        /// Gets the way points from the current lane to follow
+        /// Moves towards the waypoint equal to the current waypoint
+        ///</summary>
+       
         #region Input
         if (Input.GetKeyDown(KeyCode.LeftArrow) && Time.time > lockOut)
         {
@@ -90,6 +95,13 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
+        ///<summary>
+        /// When left is pressed, if it hasnt been pressed recently for toggle rotation then do it
+        /// If a sidelane and vehicle is past a certain speed, leantween to rotation, set lockout time
+        /// If the lane is the end of the array, revert to 0 (ie cycle through)
+        /// if the lane is a base lane, just get the current lane ++
+        ///</summary>
+        
         else if (Input.GetKeyDown(KeyCode.RightArrow) && Time.time > lockOut)
         {
             if (currentLane == 0)
@@ -127,7 +139,7 @@ public class PlayerMovement : MonoBehaviour
                // {
                     LeanTween.rotate(gameObject, new Vector3(0, 180f, 0f), (rotationspeed / speed));
                     lockOut = Time.time + timeCount;
-                    currentLane = 2;
+                    pathToFollow = getLane.lanes[currentLane--].GetComponent<Waypoints>();
                 //}
             }
             else if (currentLane >= 1 && currentLane <= 2)
@@ -149,10 +161,20 @@ public class PlayerMovement : MonoBehaviour
         }
         #endregion
 
+        ///<summary>
+        /// When right is pressed, if it hasnt been pressed recently for toggle rotation then do it
+        /// If a sidelane and vehicle is past a certain speed, leantween to rotation, set lockout time
+        /// If the lane is the start of the array, change to 11 (ie cycle through)
+        /// if the lane is a base lane, just get the current lane --
+        ///</summary>
+
         if (speed < sS.topSpeed)
         {
             speed += Time.deltaTime * sS.Acceleration;
         }
+        ///<summary>
+        /// speed is equal to accleration over time
+        ///</summary>
     }
 }
 

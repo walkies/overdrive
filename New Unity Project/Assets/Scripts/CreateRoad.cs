@@ -4,12 +4,9 @@ using UnityEngine;
 
 public class CreateRoad : MonoBehaviour
 {
-
     public int tileLength;
     public GameObject Tile;
     public int PosZ = -21;
-
-
 
     public void Awake()
     {
@@ -25,3 +22,6 @@ public class CreateRoad : MonoBehaviour
         Instantiate(Tile, new Vector3 (transform.position.x, transform.position.y,PosZ), Quaternion.identity, transform.parent);
     }
 }
+///<Summary>
+/// transforms the camera to one of two positions based on keypress
+///</Summary>

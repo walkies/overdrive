@@ -19,3 +19,6 @@ public class Music : MonoBehaviour
         aS.pitch = Mathf.Lerp(1, 1.2f, Time.time /1000);
     }
 }
+///<Summary>
+/// Lerps volume and pitch to a certain value over time
+///</Summary>
