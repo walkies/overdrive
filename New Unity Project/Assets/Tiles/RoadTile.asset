@@ -8,11 +8,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81a9312581429d6498cd873dfb4a422b, type: 3}
-  m_Name: F40
+  m_Script: {fileID: 11500000, guid: 916e86530e673dd49a84a44739952fdf, type: 3}
+  m_Name: RoadTile
   m_EditorClassIdentifier: 
-  Health: 1
-  Acceleration: 0.5
-  topSpeed: 12
-  laneSwitch: 10
-  thisSpecial: 1
+  Tile: {fileID: 1802906491253452, guid: 7738e53d0dd0eb4428e2582447685229, type: 2}
+  spawnAgression: 0
+  posZ: 0

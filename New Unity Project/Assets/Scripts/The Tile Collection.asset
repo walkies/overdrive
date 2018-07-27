@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5442e692110e78a45bef060cc6321a91, type: 3}
+  m_Name: The Tile Collection
+  m_EditorClassIdentifier: 
+  sT:
+  - {fileID: 11400000, guid: 7b458499605bcfc4381f490002c5e5aa, type: 2}
+  - {fileID: 11400000, guid: 6b03dd00d1e8ab641b3868b92fffa4c9, type: 2}
+  - {fileID: 11400000, guid: 0ac8409d5bc510d478970a2362833429, type: 2}
+  - {fileID: 11400000, guid: 191496f460792754b98e63c67aaa6e65, type: 2}

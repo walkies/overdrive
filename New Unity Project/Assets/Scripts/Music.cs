@@ -9,7 +9,7 @@ public class Music : MonoBehaviour
     private float minimum = 0.02f;
     void Start ()
     {
-        aS = GetComponent<AudioSource>();
+        aS = GetComponent<AudioSource>();      
     }
 	
 
