@@ -18,12 +18,19 @@ public class CreateRoad : MonoBehaviour
         PosZ = transform.position.z;
     }
 
-
+    ///<Summary>
+    /// Spawns tile equal to tile index, at transform position - pos.z
+    ///</Summary>
     public void Lay(int tileindex)
     {
         Instantiate(Tiles[tileindex].Tile, new Vector3(transform.position.x, transform.position.y, PosZ), Quaternion.identity, transform.parent);
     }
 
+    ///<Summary>
+    /// Spawns tile equal to tile index, at transform position - pos.z
+    /// Adds CreateRoad
+    /// Adds BoxCollider, sets size and as a trigger 
+    ///</Summary>
     public void LayWithCreateRoad(int tileindex)
     {
         var go = Instantiate(Tiles[tileindex].Tile, new Vector3(transform.position.x, transform.position.y, PosZ), Quaternion.identity, transform.parent);
@@ -32,6 +39,12 @@ public class CreateRoad : MonoBehaviour
         go.GetComponent<BoxCollider>().size = new Vector3(30, 30, 30);
     }
 
+
+    ///<Summary>
+    /// Checks what tile called it 
+    /// Spawns down that lane
+    /// if the tile is the last one spawned add extra components to it
+    ///</Summary>
     public void OnTriggerEnter(Collider col)
     {
         Debug.Log("i have triggered");
@@ -109,6 +122,4 @@ public class CreateRoad : MonoBehaviour
         }
     }
 }
-///<Summary>
-/// transforms the camera to one of two positions based on keypress
-///</Summary>
+

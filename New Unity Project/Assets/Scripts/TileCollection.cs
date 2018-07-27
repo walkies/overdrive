@@ -33,3 +33,14 @@ public class TileCollection : ScriptableObject
     }
 #endif
 }
+///<summary>
+///sT is equal to get all instances of scriptable tile
+///SetDirty(flag to save this data)
+///GetAllInstances:
+///AssetDatabase.find assets equal to scriptable object name in the data folder
+///Add them to a new array
+///Loop through that array
+///Foreach get the guid to the asset path
+///Then load those asset paths
+///Return that path
+/// </summary>
