@@ -7,7 +7,7 @@ public class TileStorage : MonoBehaviour {
     public TileCollection tC;
     public ScriptableTile[] Tiles;
 
-    public void Start()
+    public void Awake()
     {
         Tiles = tC.sT;
     }

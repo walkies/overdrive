@@ -6,5 +6,5 @@ using UnityEngine;
 public class ScriptableTile : ScriptableObject
 {
     public GameObject Tile;
-    public float spawnAggression;
+    public int spawnAggression;
 }

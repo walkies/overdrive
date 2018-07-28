@@ -7,7 +7,7 @@ public class CreateRoad : MonoBehaviour
     public Waypoints way;
     public TileStorage tS;
     private int tileLength = 200;
-    private ScriptableTile[] Tiles;
+    public ScriptableTile[] Tiles;
     public float PosZ;
 
     public void Start()
@@ -50,7 +50,7 @@ public class CreateRoad : MonoBehaviour
         Debug.Log("i have triggered");
         if (col.gameObject.CompareTag("Player"))
         {
-            if (gameObject.name == ("Roof"))
+            if (gameObject.CompareTag("Roof"))
             {
                 for (int i = 0; i < tileLength; i++)
                 {
@@ -67,7 +67,7 @@ public class CreateRoad : MonoBehaviour
                 }
                 Overlord.updateRoofIndex();
             }
-            else if (gameObject.name == ("Road"))
+            else if (gameObject.CompareTag("Road"))
             {
                 for (int i = 0; i < tileLength; i++)
                 {
@@ -84,7 +84,7 @@ public class CreateRoad : MonoBehaviour
                 }
                 Overlord.updateRoadIndex();
             }
-            else if (gameObject.name == ("LeftWall"))
+            else if (gameObject.CompareTag("LeftWall"))
             {
                 for (int i = 0; i < tileLength; i++)
                 {
@@ -101,7 +101,7 @@ public class CreateRoad : MonoBehaviour
                }
                 Overlord.updateLeftWallIndex();
             }
-            else if (gameObject.name == ("RightWall"))
+            else if (gameObject.CompareTag("RightWall"))
             {
                 for (int i = 0; i < tileLength; i++)
                 {
