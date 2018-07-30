@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 916e86530e673dd49a84a44739952fdf, type: 3}
-  m_Name: RoadTile2
+  m_Name: LeftWallTile4
   m_EditorClassIdentifier: 
-  Tile: {fileID: 1802906491253452, guid: 7738e53d0dd0eb4428e2582447685229, type: 2}
-  spawnAggression: 2
+  Tile: {fileID: 1875895763817930, guid: 5481ad7b6d343d9408d1b4f092949f71, type: 2}
+  spawnAggression: 6

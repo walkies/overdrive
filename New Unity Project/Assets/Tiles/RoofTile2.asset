@@ -11,6 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916e86530e673dd49a84a44739952fdf, type: 3}
   m_Name: RoofTile2
   m_EditorClassIdentifier: 
-  Tile: {fileID: 0}
-  spawnAgression: 0
-  posZ: 0
+  Tile: {fileID: 1799793253056924, guid: c80ce617bddf7fd4db81a79f2eba6e85, type: 2}
+  spawnAggression: 2

@@ -6,10 +6,9 @@ public class Waypoints : MonoBehaviour
 {
     public Transform[] wayPoints;
 
-    void Start()
+    void Update()
     {
-        GetWaypoints();
-       
+        GetWaypoints();    
     }
 
     public void GetWaypoints()

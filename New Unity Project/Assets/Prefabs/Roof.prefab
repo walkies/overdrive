@@ -21,9 +21,10 @@ GameObject:
   - component: {fileID: 4698706756694108}
   - component: {fileID: 33984634116475026}
   - component: {fileID: 23305657465054636}
+  - component: {fileID: 114382487253591440}
   m_Layer: 0
   m_Name: Roof
-  m_TagString: Tile
+  m_TagString: Roof
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,3 +84,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1799793253056924}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114382487253591440
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1799793253056924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 497c1c16144905c4eb812027225b3a27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tS: {fileID: 0}
+  Obstacles:
+  - {fileID: 1373537884237348, guid: 197c9c7d7ce335249a8249aa00f8d1ba, type: 2}
+  - {fileID: 1679520265516656, guid: 43495cd1704160b4584e8c14ecab42f9, type: 2}
+  - {fileID: 1486882273660922, guid: fc4a8d61654a0d941a25411d6763224b, type: 2}
+  posX: 0
+  posY: 0
+  spawnIndex: 0
+  spawnChance: 0

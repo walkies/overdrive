@@ -11,6 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916e86530e673dd49a84a44739952fdf, type: 3}
   m_Name: LeftWallTile2
   m_EditorClassIdentifier: 
-  Tile: {fileID: 0}
-  spawnAgression: 0
-  posZ: 0
+  Tile: {fileID: 1875895763817930, guid: 5481ad7b6d343d9408d1b4f092949f71, type: 2}
+  spawnAggression: 2

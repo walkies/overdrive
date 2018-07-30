@@ -36,7 +36,7 @@ public class CreateRoad : MonoBehaviour
         var go = Instantiate(Tiles[tileindex].Tile, new Vector3(transform.position.x, transform.position.y, PosZ), Quaternion.identity, transform.parent);
         go.AddComponent<CreateRoad>();
         go.AddComponent<BoxCollider>().isTrigger = true;
-        go.GetComponent<BoxCollider>().size = new Vector3(30, 30, 30);
+        go.GetComponent<BoxCollider>().size = new Vector3(90, 90, 90);
     }
 
 
@@ -52,74 +52,102 @@ public class CreateRoad : MonoBehaviour
         {
             if (gameObject.CompareTag("Roof"))
             {
-                for (int i = 0; i < tileLength; i++)
-                {
-                    if (i < (tileLength - 1))
-                    {
-                        Lay(Overlord.RoofIndex);
-                        PosZ--;
-                    }
-                    else if (i == (tileLength - 1))
-                    {
-                        LayWithCreateRoad(Overlord.RoofIndex);
-                        PosZ--;
-                    }
-                }
-                Overlord.updateRoofIndex();
+                StartCoroutine("CreateRoofTile");
             }
             else if (gameObject.CompareTag("Road"))
             {
-                for (int i = 0; i < tileLength; i++)
-                {
-                    if (i < (tileLength - 1))
-                    {
-                        Lay(Overlord.RoadIndex);
-                        PosZ--;
-                    }
-                    else if (i == (tileLength - 1))
-                    {
-                        LayWithCreateRoad(Overlord.RoadIndex);
-                        PosZ--;
-                    }
-                }
-                Overlord.updateRoadIndex();
+                StartCoroutine("CreateRoadTile");
             }
             else if (gameObject.CompareTag("LeftWall"))
             {
-                for (int i = 0; i < tileLength; i++)
-                {
-                    if (i < (tileLength - 1))
-                    {
-                        Lay(Overlord.LeftWallIndex);
-                        PosZ--;
-                    }
-                    else if (i == (tileLength - 1))
-                    {
-                        LayWithCreateRoad(Overlord.LeftWallIndex);
-                        PosZ--;
-                    }             
-               }
-                Overlord.updateLeftWallIndex();
+                StartCoroutine("CreateLeftWallTile");
             }
             else if (gameObject.CompareTag("RightWall"))
             {
-                for (int i = 0; i < tileLength; i++)
-                {
-                    if (i < (tileLength - 1))
-                    {
-                        Lay(Overlord.RightWallIndex);
-                        PosZ--;
-                    }
-                    else if (i == (tileLength - 1))
-                    {
-                        LayWithCreateRoad(Overlord.RightWallIndex);
-                        PosZ--;
-                    }
-                }
-                Overlord.updateRightWallIndex();
+                StartCoroutine("CreateRightWallTile");
             }
             way.GetWaypoints();
         }
     }
+    private IEnumerator CreateRoofTile()
+    {
+        for (int i = 0; i < tileLength; i++)
+        {
+            yield return new WaitForSeconds(0.1f);
+            if (i < (tileLength - 1))
+            {
+                Lay(Overlord.RoofIndex);
+                PosZ--;
+            }
+            else if (i == (tileLength - 1))
+            {
+                LayWithCreateRoad(Overlord.RoofIndex);
+                PosZ--;
+            }
+        }
+        Overlord.updateRoofIndex();
+        StopCoroutine("CreateRoofTile");
+    }
+
+    private IEnumerator CreateRoadTile()
+    {
+        for (int i = 0; i < tileLength; i++)
+        {
+            yield return new WaitForSeconds(0.1f);
+            if (i < (tileLength - 1))
+            {
+                Lay(Overlord.RoadIndex);
+                PosZ--;
+            }
+            else if (i == (tileLength - 1))
+            {
+                LayWithCreateRoad(Overlord.RoadIndex);
+                PosZ--;
+            }
+        }
+        Overlord.updateRoadIndex();
+        StopCoroutine("CreateRoadTile");
+    }
+
+    private IEnumerator CreateLeftWallTile()
+    {
+        for (int i = 0; i < tileLength; i++)
+        {
+            yield return new WaitForSeconds(0.1f);
+            if (i < (tileLength - 1))
+            {
+                Lay(Overlord.LeftWallIndex);
+                PosZ--;
+            }
+            else if (i == (tileLength - 1))
+            {
+                LayWithCreateRoad(Overlord.LeftWallIndex);
+                PosZ--;
+            }
+        }
+        Overlord.updateLeftWallIndex();
+        StopCoroutine("CreateLeftWallTile");
+    }
+
+    private IEnumerator CreateRightWallTile()
+    {
+        for (int i = 0; i < tileLength; i++)
+        {
+            yield return new WaitForSeconds(0.1f);
+            if (i < (tileLength - 1))
+            {
+                Lay(Overlord.RightWallIndex);
+                PosZ--;
+            }
+            else if (i == (tileLength - 1))
+            {
+                LayWithCreateRoad(Overlord.RightWallIndex);
+                PosZ--;
+            }
+        }
+        Overlord.updateRightWallIndex();
+        StopCoroutine("CreateRightWallTile");
+    }
 }
+
 

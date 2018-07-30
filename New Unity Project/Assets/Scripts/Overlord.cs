@@ -5,9 +5,9 @@ using UnityEngine;
 public static class Overlord
 {
     public static int LeftWallIndex = 0;
-    public static int RightWallIndex = 2;
-    public static int RoadIndex = 4;
-    public static int RoofIndex = 6;
+    public static int RightWallIndex = 5;
+    public static int RoadIndex = 9;
+    public static int RoofIndex = 13;
     
     public static int roadCheck = 0;
     public static int roofCheck = 0;

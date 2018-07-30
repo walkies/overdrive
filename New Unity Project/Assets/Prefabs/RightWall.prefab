@@ -21,9 +21,10 @@ GameObject:
   - component: {fileID: 4570282287946214}
   - component: {fileID: 33192773447302638}
   - component: {fileID: 23948196554248894}
+  - component: {fileID: 114185778038297012}
   m_Layer: 0
   m_Name: RightWall
-  m_TagString: Untagged
+  m_TagString: RightWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,3 +84,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1523315294688116}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114185778038297012
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1523315294688116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 497c1c16144905c4eb812027225b3a27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tS: {fileID: 0}
+  Obstacles:
+  - {fileID: 1523315294688116}
+  - {fileID: 1286490625286104, guid: 0972d119d1802bf428ce080f30209e5e, type: 2}
+  - {fileID: 1240687718737550, guid: 7b9928170873d6a43a3be731d3a49999, type: 2}
+  posX: 0
+  posY: 0
+  spawnIndex: 0
+  spawnChance: 0

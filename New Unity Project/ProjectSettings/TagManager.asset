@@ -9,6 +9,10 @@ TagManager:
   - 3
   - 0
   - Tile
+  - LeftWall
+  - RightWall
+  - Road
+  - Roof
   layers:
   - Default
   - TransparentFX
