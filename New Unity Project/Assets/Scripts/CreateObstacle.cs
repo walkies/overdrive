@@ -13,6 +13,11 @@ public class CreateObstacle : MonoBehaviour
 
     void Start()
     {
+        Destroy(GetComponent<MeshRenderer>(), 50);
+        Destroy(GetComponent<MeshFilter>(), 50);
+        Destroy(GetComponent<BoxCollider>(), 50);
+        Destroy(GetComponent<CreateObstacle>(), 50);
+
         tS = FindObjectOfType<TileStorage>();
         posX = transform.position.x;
         posY = transform.position.y;
@@ -43,7 +48,7 @@ public class CreateObstacle : MonoBehaviour
 
     public void SpawnObstacle()
     {
-        if (spawnChance == 100)
+        if (spawnChance == 160)
         {
             Instantiate(Obstacles[spawnIndex], new Vector3(posX, posY, transform.position.z), Quaternion.identity, transform.parent);
         }

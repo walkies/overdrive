@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Name: RoadTile2
   m_EditorClassIdentifier: 
   Tile: {fileID: 1802906491253452, guid: 7738e53d0dd0eb4428e2582447685229, type: 2}
-  spawnAggression: 2
+  spawnAggression: 3

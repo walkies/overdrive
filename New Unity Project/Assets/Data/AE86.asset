@@ -13,6 +13,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: 1
   Acceleration: 0.1
-  topSpeed: 5
+  topSpeed: 7
   laneSwitch: 10
   thisSpecial: 0

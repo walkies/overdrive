@@ -36,7 +36,7 @@ public class CreateRoad : MonoBehaviour
         var go = Instantiate(Tiles[tileindex].Tile, new Vector3(transform.position.x, transform.position.y, PosZ), Quaternion.identity, transform.parent);
         go.AddComponent<CreateRoad>();
         go.AddComponent<BoxCollider>().isTrigger = true;
-        go.GetComponent<BoxCollider>().size = new Vector3(90, 90, 90);
+        go.GetComponent<BoxCollider>().size = new Vector3(110, 110, 110);
     }
 
 
@@ -67,13 +67,14 @@ public class CreateRoad : MonoBehaviour
                 StartCoroutine("CreateRightWallTile");
             }
             way.GetWaypoints();
+           // Resources.UnloadUnusedAssets();
         }
     }
     private IEnumerator CreateRoofTile()
     {
         for (int i = 0; i < tileLength; i++)
         {
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.05f);
             if (i < (tileLength - 1))
             {
                 Lay(Overlord.RoofIndex);
@@ -93,7 +94,7 @@ public class CreateRoad : MonoBehaviour
     {
         for (int i = 0; i < tileLength; i++)
         {
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.05f);
             if (i < (tileLength - 1))
             {
                 Lay(Overlord.RoadIndex);
@@ -113,7 +114,7 @@ public class CreateRoad : MonoBehaviour
     {
         for (int i = 0; i < tileLength; i++)
         {
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.05f);
             if (i < (tileLength - 1))
             {
                 Lay(Overlord.LeftWallIndex);
@@ -133,7 +134,7 @@ public class CreateRoad : MonoBehaviour
     {
         for (int i = 0; i < tileLength; i++)
         {
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.05f);
             if (i < (tileLength - 1))
             {
                 Lay(Overlord.RightWallIndex);

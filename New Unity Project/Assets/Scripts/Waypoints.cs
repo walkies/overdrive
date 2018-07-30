@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class Waypoints : MonoBehaviour
 {
+    [HideInInspector]
     public Transform[] wayPoints;
 
     void Update()
     {
-        GetWaypoints();    
+        GetWaypoints();
     }
 
     public void GetWaypoints()

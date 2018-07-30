@@ -27,7 +27,7 @@ GameObject:
   m_TagString: RightWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4570282287946214
 Transform:
@@ -49,8 +49,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1523315294688116}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tS: {fileID: 0}
   Obstacles:
-  - {fileID: 1523315294688116}
+  - {fileID: 1769584582472670, guid: 69bb68c64c7fe4149a007a63c9171e84, type: 2}
   - {fileID: 1286490625286104, guid: 0972d119d1802bf428ce080f30209e5e, type: 2}
   - {fileID: 1240687718737550, guid: 7b9928170873d6a43a3be731d3a49999, type: 2}
   posX: 0
