@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CreateRoad : MonoBehaviour
 {
-    public Waypoints way;
     public TileStorage tS;
     private int tileLength = 200;
     public ScriptableTile[] Tiles;
@@ -13,7 +12,6 @@ public class CreateRoad : MonoBehaviour
     public void Start()
     {
         tS = FindObjectOfType<TileStorage>();
-        way = GetComponentInParent<Waypoints>();
         Tiles = tS.Tiles;
         PosZ = transform.position.z;
     }
@@ -66,7 +64,6 @@ public class CreateRoad : MonoBehaviour
             {
                 StartCoroutine("CreateRightWallTile");
             }
-            way.GetWaypoints();
            // Resources.UnloadUnusedAssets();
         }
     }

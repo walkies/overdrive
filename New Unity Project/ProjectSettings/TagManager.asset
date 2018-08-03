@@ -13,6 +13,7 @@ TagManager:
   - RightWall
   - Road
   - Roof
+  - TurnPoint
   layers:
   - Default
   - TransparentFX

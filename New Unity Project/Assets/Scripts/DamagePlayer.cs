@@ -22,11 +22,11 @@ public class DamagePlayer : MonoBehaviour
             pM.sS.Health--;
             if (pM.sS.Health <= 0)
             {
-                Destroy(col.gameObject.GetComponentInChildren<Player>());
-                Destroy(col.gameObject.GetComponentInChildren<PlayerMovement>());
+                Destroy(col.gameObject.GetComponentInParent<Player>());
+                Destroy(col.gameObject.GetComponentInParent<PlayerMovement>());
                 mainCam.transform.parent = null;
                 StartCoroutine("TimeTillEnd");
-                LeanTween.move(mainCam.gameObject, new Vector3(transform.position.x - 1, transform.position.y, transform.position.z - 15), 3);
+                LeanTween.move(mainCam.gameObject, new Vector3(transform.position.x, transform.position.y + 1, transform.position.z - 15), (15/pM.speed));
             }
         }
     }
