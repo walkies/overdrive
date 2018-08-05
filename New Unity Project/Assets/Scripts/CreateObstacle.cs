@@ -12,7 +12,7 @@ public class CreateObstacle : MonoBehaviour
 
     void Start()
     {
-        Destroy(gameObject, 60);
+        Destroy(gameObject, 45);
 
         posX = transform.position.x;
         posY = transform.position.y;

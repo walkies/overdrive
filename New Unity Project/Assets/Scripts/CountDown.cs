@@ -6,6 +6,6 @@ public class CountDown : MonoBehaviour {
 
 	void Start ()
     {
-        Destroy(gameObject, 45);
+        Destroy(gameObject, 30);
 	}
 }
