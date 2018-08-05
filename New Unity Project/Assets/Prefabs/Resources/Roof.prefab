@@ -95,7 +95,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 497c1c16144905c4eb812027225b3a27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tS: {fileID: 0}
   Obstacles:
   - {fileID: 1373537884237348, guid: 197c9c7d7ce335249a8249aa00f8d1ba, type: 2}
   - {fileID: 1679520265516656, guid: 43495cd1704160b4584e8c14ecab42f9, type: 2}

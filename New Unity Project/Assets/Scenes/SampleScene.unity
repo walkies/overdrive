@@ -253,6 +253,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pM: {fileID: 453403388}
   rB: {fileID: 453403394}
+--- !u!114 &24441137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 24441132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7349c225b09ad85479d33730d441c6ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
 --- !u!1 &63546257
 GameObject:
   m_ObjectHideFlags: 0
@@ -350,7 +362,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b17e131907f6a644b15419448511a51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tS: {fileID: 0}
   Tiles: []
   PosZ: 0
 --- !u!1 &155734700
@@ -634,7 +645,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b17e131907f6a644b15419448511a51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tS: {fileID: 0}
   Tiles: []
   PosZ: 0
 --- !u!65 &394138898
@@ -735,9 +745,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sS: {fileID: 11400000, guid: b9fe0707bd5f0cc49bd888afeacad0a0, type: 2}
-  reachDistance: 1
   currentLane: 1
-  speed: 0
+  speed: 1
   lockOut: 0
 --- !u!4 &453403389
 Transform:
@@ -905,7 +914,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b17e131907f6a644b15419448511a51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tS: {fileID: 0}
   Tiles: []
   PosZ: 0
 --- !u!65 &476881967
@@ -1005,7 +1013,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b17e131907f6a644b15419448511a51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tS: {fileID: 0}
   Tiles: []
   PosZ: 0
 --- !u!65 &481408076
@@ -1133,7 +1140,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b17e131907f6a644b15419448511a51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tS: {fileID: 0}
   Tiles: []
   PosZ: 0
 --- !u!65 &661066400
@@ -1300,7 +1306,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b17e131907f6a644b15419448511a51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tS: {fileID: 0}
   Tiles: []
   PosZ: 0
 --- !u!1 &693083650 stripped
@@ -1518,7 +1523,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b17e131907f6a644b15419448511a51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tS: {fileID: 0}
   Tiles: []
   PosZ: 0
 --- !u!1 &1445583136
@@ -1529,7 +1533,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1445583138}
-  - component: {fileID: 1445583137}
   - component: {fileID: 1445583139}
   m_Layer: 0
   m_Name: Manager
@@ -1538,19 +1541,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1445583137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1445583136}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 928d5c3d8a94b79488ae61511c116f53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tC: {fileID: 11400000, guid: 8dd52a5c49f5c644a928bd8c0aa94d66, type: 2}
-  Tiles: []
 --- !u!4 &1445583138
 Transform:
   m_ObjectHideFlags: 0
@@ -1610,7 +1600,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b17e131907f6a644b15419448511a51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tS: {fileID: 0}
   Tiles: []
   PosZ: 0
 --- !u!65 &1527273318
@@ -1780,7 +1769,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b17e131907f6a644b15419448511a51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tS: {fileID: 0}
   Tiles: []
   PosZ: 0
 --- !u!65 &1645800102
@@ -1880,7 +1868,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b17e131907f6a644b15419448511a51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tS: {fileID: 0}
   Tiles: []
   PosZ: 0
 --- !u!65 &1676508082
@@ -1987,7 +1974,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 036c906212779e145923c06bd0729966, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 036c906212779e145923c06bd0729966, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -2116,7 +2103,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b17e131907f6a644b15419448511a51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tS: {fileID: 0}
   Tiles: []
   PosZ: 0
 --- !u!65 &2032024506
@@ -2216,7 +2202,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b17e131907f6a644b15419448511a51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tS: {fileID: 0}
   Tiles: []
   PosZ: 0
 --- !u!65 &2146998675

@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class CreateRoad : MonoBehaviour
 {
-    public TileStorage tS;
+    public List <GameObject> Tiles = new List<GameObject>();
     private int tileLength = 300;
-    public ScriptableTile[] Tiles;
     public float PosZ;
 
-    public void Start()
+    public void Awake()
     {
-        tS = FindObjectOfType<TileStorage>();
-        Tiles = tS.Tiles;
+        Tiles.Add(Resources.Load<GameObject>("Roof"));
+        Tiles.Add(Resources.Load<GameObject>("Road"));
+        Tiles.Add(Resources.Load<GameObject>("LeftWall"));
+        Tiles.Add(Resources.Load<GameObject>("RightWall"));
         PosZ = transform.position.z;
     }
 
@@ -21,7 +22,7 @@ public class CreateRoad : MonoBehaviour
     ///</Summary>
     public void Lay(int tileindex)
     {
-        Instantiate(Tiles[tileindex].Tile, new Vector3(transform.position.x, transform.position.y, PosZ), Quaternion.identity, transform.parent);
+        Instantiate(Tiles[tileindex], new Vector3(transform.position.x, transform.position.y, PosZ), Quaternion.identity, transform.parent);
     }
 
     ///<Summary>
@@ -31,7 +32,7 @@ public class CreateRoad : MonoBehaviour
     ///</Summary>
     public void LayWithCreateRoad(int tileindex)
     {
-        var go = Instantiate(Tiles[tileindex].Tile, new Vector3(transform.position.x, transform.position.y, PosZ), Quaternion.identity, transform.parent);
+        var go = Instantiate(Tiles[tileindex], new Vector3(transform.position.x, transform.position.y, PosZ), Quaternion.identity, transform.parent);
         go.AddComponent<CreateRoad>();
         go.AddComponent<BoxCollider>().isTrigger = true;
         go.GetComponent<BoxCollider>().size = new Vector3(110, 110, 110);
@@ -74,12 +75,12 @@ public class CreateRoad : MonoBehaviour
             yield return new WaitForSeconds(0.01f);
             if (i < (tileLength - 1))
             {
-                Lay(Overlord.RoofIndex);
+                Lay(0);
                 PosZ--;
             }
             else if (i == (tileLength - 1))
             {
-                LayWithCreateRoad(Overlord.RoofIndex);
+                LayWithCreateRoad(0);
                 PosZ--;
             }
         }
@@ -94,12 +95,12 @@ public class CreateRoad : MonoBehaviour
             yield return new WaitForSeconds(0.01f);
             if (i < (tileLength - 1))
             {
-                Lay(Overlord.RoadIndex);
+                Lay(1);
                 PosZ--;
             }
             else if (i == (tileLength - 1))
             {
-                LayWithCreateRoad(Overlord.RoadIndex);
+                LayWithCreateRoad(1);
                 PosZ--;
             }
         }
@@ -114,12 +115,12 @@ public class CreateRoad : MonoBehaviour
             yield return new WaitForSeconds(0.01f);
             if (i < (tileLength - 1))
             {
-                Lay(Overlord.LeftWallIndex);
+                Lay(2);
                 PosZ--;
             }
             else if (i == (tileLength - 1))
             {
-                LayWithCreateRoad(Overlord.LeftWallIndex);
+                LayWithCreateRoad(2);
                 PosZ--;
             }
         }
@@ -134,12 +135,12 @@ public class CreateRoad : MonoBehaviour
             yield return new WaitForSeconds(0.01f);
             if (i < (tileLength - 1))
             {
-                Lay(Overlord.RightWallIndex);
+                Lay(3);
                 PosZ--;
             }
             else if (i == (tileLength - 1))
             {
-                LayWithCreateRoad(Overlord.RightWallIndex);
+                LayWithCreateRoad(3);
                 PosZ--;
             }
         }

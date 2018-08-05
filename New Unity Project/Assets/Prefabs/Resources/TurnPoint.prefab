@@ -1094,7 +1094,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b17e131907f6a644b15419448511a51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tS: {fileID: 0}
   Tiles: []
   PosZ: 0
 --- !u!114 &114122283102924712
@@ -1108,7 +1107,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b17e131907f6a644b15419448511a51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tS: {fileID: 0}
   Tiles: []
   PosZ: 0
 --- !u!114 &114226546227344732
@@ -1122,7 +1120,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b17e131907f6a644b15419448511a51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tS: {fileID: 0}
   Tiles: []
   PosZ: 0
 --- !u!114 &114383909472126496
@@ -1136,7 +1133,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b17e131907f6a644b15419448511a51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tS: {fileID: 0}
   Tiles: []
   PosZ: 0
 --- !u!114 &114400675714787716
@@ -1150,7 +1146,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b17e131907f6a644b15419448511a51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tS: {fileID: 0}
   Tiles: []
   PosZ: 0
 --- !u!114 &114428966771059316
@@ -1164,7 +1159,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b17e131907f6a644b15419448511a51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tS: {fileID: 0}
   Tiles: []
   PosZ: 0
 --- !u!114 &114445777725207464
@@ -1178,7 +1172,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b17e131907f6a644b15419448511a51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tS: {fileID: 0}
   Tiles: []
   PosZ: 0
 --- !u!114 &114448479721223126
@@ -1192,7 +1185,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b17e131907f6a644b15419448511a51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tS: {fileID: 0}
   Tiles: []
   PosZ: 0
 --- !u!114 &114516753590603500
@@ -1206,7 +1198,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b17e131907f6a644b15419448511a51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tS: {fileID: 0}
   Tiles: []
   PosZ: 0
 --- !u!114 &114728248983221452
@@ -1220,7 +1211,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b17e131907f6a644b15419448511a51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tS: {fileID: 0}
   Tiles: []
   PosZ: 0
 --- !u!114 &114762518565398988
@@ -1234,7 +1224,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b17e131907f6a644b15419448511a51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tS: {fileID: 0}
   Tiles: []
   PosZ: 0
 --- !u!114 &114893015604427910
@@ -1248,6 +1237,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b17e131907f6a644b15419448511a51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tS: {fileID: 0}
   Tiles: []
   PosZ: 0

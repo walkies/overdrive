@@ -6,8 +6,6 @@ public class PlayerMovement : MonoBehaviour
 {
     public ScriptableStats sS;
 
-    public float reachDistance = 1f;
-    private float rotationspeed = 2f;
     public int currentLane = 1;
     public float speed;
     private float timeCount = 0.5f;

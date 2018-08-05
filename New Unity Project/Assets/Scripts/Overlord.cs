@@ -3,55 +3,34 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public static class Overlord
-{
-    public static int LeftWallIndex = 0;
-    public static int RightWallIndex = 11;
-    public static int RoadIndex = 21;
-    public static int RoofIndex = 31;
-    
-    public static int roadCheck = 0;
-    public static int roofCheck = 0;
-    public static int leftWallCheck = 0;
-    public static int rightWallCheck = 0;
-
+{ 
+    public static int roadAggression = 0;
+    public static int roofAggression = 0;
+    public static int leftWallAggression = 0;
+    public static int rightWallAggression = 0;
 
     public static void updateRoadIndex()
     {
-        roadCheck++;
-        if (roadCheck % 3 == 0)
-        {
-            RoadIndex++;
-        }
+        roadAggression++;
+        roadAggression++;
+        roadAggression++;
     }
+
     public static void updateRoofIndex()
     {
-        roofCheck++;
-        if (roofCheck % 3 == 0)
-        {
-            RoofIndex++;
-        }
+        roofAggression++;
+        roofAggression++;
     }
+
     public static void updateLeftWallIndex()
     {
-        leftWallCheck++;
-        if (leftWallCheck % 3 == 0)
-        {
-            LeftWallIndex++;
-        }
+        leftWallAggression++;
+        leftWallAggression++;
     }
+
     public static void updateRightWallIndex()
     {
-        rightWallCheck++;
-        if (rightWallCheck % 3 == 0)
-        {
-            RightWallIndex++;
-        }
+        rightWallAggression++;
+        rightWallAggression++;
     }
-    ///<summary>
-    ///Called by each spawning lane
-    ///Once all have been called 
-    ///Indexs by one for new variables 
-    /// </summary>
-  
-
 }

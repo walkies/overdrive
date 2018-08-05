@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CreateObstacle : MonoBehaviour
 {
-    public TileStorage tS;
     public GameObject[] Obstacles;
     public float posX;
     public float posY;
@@ -13,9 +12,8 @@ public class CreateObstacle : MonoBehaviour
 
     void Start()
     {
-        Destroy(gameObject, 50);
+        Destroy(gameObject, 60);
 
-        tS = FindObjectOfType<TileStorage>();
         posX = transform.position.x;
         posY = transform.position.y;
         spawnIndex = Random.Range(0, 3);
@@ -23,29 +21,29 @@ public class CreateObstacle : MonoBehaviour
         if (gameObject.CompareTag("Roof"))
         {
             posY = 4;
-            spawnChance = Random.Range(tS.Tiles[Overlord.RoofIndex].spawnAggression, 161);
+            spawnChance = Random.Range(Overlord.roofAggression, 201);
         }
         else if (gameObject.CompareTag("Road"))
         {
             posY = 0;
-            spawnChance = Random.Range(tS.Tiles[Overlord.RoadIndex].spawnAggression, 161);
+            spawnChance = Random.Range(Overlord.roadAggression, 201);
         }
         else if (gameObject.CompareTag("LeftWall"))
         {
             posX = 11;
-            spawnChance = Random.Range(tS.Tiles[Overlord.LeftWallIndex].spawnAggression, 161);
+            spawnChance = Random.Range(Overlord.leftWallAggression, 201);
         }
         else if (gameObject.CompareTag("RightWall"))
         {
             posX = 7;
-            spawnChance = Random.Range(tS.Tiles[Overlord.RightWallIndex].spawnAggression, 161);
+            spawnChance = Random.Range(Overlord.rightWallAggression, 201);
         }
         SpawnObstacle();
     }
 
     public void SpawnObstacle()
     {
-        if (spawnChance == 160)
+        if (spawnChance == 200)
         {
             Instantiate(Obstacles[spawnIndex], new Vector3(posX, posY, transform.position.z), Quaternion.identity, transform.parent);
         }

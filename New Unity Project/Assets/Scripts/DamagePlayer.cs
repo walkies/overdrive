@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class DamagePlayer : MonoBehaviour
 {
+    public Health hp;
     public PlayerMovement pM;
     public Camera mainCam;
     public Canvas endScreen;
 
 	void Start ()
     {
+        hp = FindObjectOfType<Health>();
         pM = FindObjectOfType<PlayerMovement>();
         mainCam = FindObjectOfType<Camera>();
         endScreen = FindObjectOfType<Canvas>();
@@ -19,8 +21,8 @@ public class DamagePlayer : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player"))
         {
-            pM.sS.Health--;
-            if (pM.sS.Health <= 0)
+            hp.health--;
+            if (hp.health <= 0)
             {
                 Destroy(col.gameObject.GetComponentInParent<Player>());
                 Destroy(col.gameObject.GetComponentInParent<PlayerMovement>());
