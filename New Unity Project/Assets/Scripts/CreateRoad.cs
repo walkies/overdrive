@@ -100,7 +100,7 @@ public class CreateRoad : MonoBehaviour
             }
             else if (i == (tileLength - 1))
             {
-                LayWithCreateRoad(1);
+                LayWithCreateRoad(1); //laywith turn
                 PosZ--;
             }
         }
