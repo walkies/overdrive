@@ -9,13 +9,12 @@ public class Player : MonoBehaviour {
 
     void Start ()
     {
-        pM = GetComponentInChildren<PlayerMovement>();
 
     }
 	
 
 	public void Update ()
     {
-        transform.position += transform.forward * Time.deltaTime * pM.speed;
+        transform.position -= transform.forward * Time.deltaTime * pM.speed;
     }
 }

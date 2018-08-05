@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: F40
   m_EditorClassIdentifier: 
   Health: 0
-  Acceleration: 0.15
-  topSpeed: 15
+  Acceleration: 0.4
+  topSpeed: 25
   laneSwitch: 10
   thisSpecial: 1

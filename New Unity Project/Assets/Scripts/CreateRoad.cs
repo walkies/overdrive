@@ -5,7 +5,7 @@ using UnityEngine;
 public class CreateRoad : MonoBehaviour
 {
     public TileStorage tS;
-    private int tileLength = 200;
+    private int tileLength = 300;
     public ScriptableTile[] Tiles;
     public float PosZ;
 
@@ -71,7 +71,7 @@ public class CreateRoad : MonoBehaviour
     {
         for (int i = 0; i < tileLength; i++)
         {
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(0.01f);
             if (i < (tileLength - 1))
             {
                 Lay(Overlord.RoofIndex);
@@ -91,7 +91,7 @@ public class CreateRoad : MonoBehaviour
     {
         for (int i = 0; i < tileLength; i++)
         {
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(0.01f);
             if (i < (tileLength - 1))
             {
                 Lay(Overlord.RoadIndex);
@@ -111,7 +111,7 @@ public class CreateRoad : MonoBehaviour
     {
         for (int i = 0; i < tileLength; i++)
         {
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(0.01f);
             if (i < (tileLength - 1))
             {
                 Lay(Overlord.LeftWallIndex);
@@ -131,7 +131,7 @@ public class CreateRoad : MonoBehaviour
     {
         for (int i = 0; i < tileLength; i++)
         {
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(0.01f);
             if (i < (tileLength - 1))
             {
                 Lay(Overlord.RightWallIndex);
