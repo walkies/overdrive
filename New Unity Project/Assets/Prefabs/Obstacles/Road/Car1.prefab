@@ -109,6 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d574ed31bc32c1249ae38a5b923bf8e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyTime: 30
 --- !u!114 &114949905066797510
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -120,6 +121,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7f244196bb31d44890187299ebbf4d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hp: {fileID: 0}
   pM: {fileID: 0}
   mainCam: {fileID: 0}
   endScreen: {fileID: 0}
+  aSO: {fileID: 11400000, guid: 611490512ea8a7b4cb8c22a759efc2ad, type: 2}
+  crash: {fileID: 11400000, guid: 0a69a5401bcd9d748b3f62500c34d75e, type: 2}

@@ -8,12 +8,14 @@ public class DamagePlayer : MonoBehaviour
     public PlayerMovement pM;
     public Camera mainCam;
     public Canvas endScreen;
+    public AudioEffectSO aSO;
+    public AudioEffectSO crash;
 
-	void Start ()
+    void Start ()
     {
         hp = FindObjectOfType<Health>();
         pM = FindObjectOfType<PlayerMovement>();
-        mainCam = FindObjectOfType<Camera>();
+        mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         endScreen = FindObjectOfType<Canvas>();
     }
 
@@ -26,10 +28,15 @@ public class DamagePlayer : MonoBehaviour
             {
                 Destroy(col.gameObject.GetComponentInParent<Player>());
                 Destroy(col.gameObject.GetComponentInParent<PlayerMovement>());
+                crash.Play();
                 mainCam.transform.parent = null;
                 StartCoroutine("TimeTillEnd");
                 LeanTween.move(mainCam.gameObject, new Vector3(transform.position.x, transform.position.y + 1, transform.position.z - 15), (15/pM.speed));
             }
+        }
+        else if (col.gameObject.CompareTag("Sound"))
+        {
+            aSO.Play();
         }
     }
     

@@ -13,7 +13,7 @@ public static class Overlord
 
     public static void updateRoadIndex()
     {
-        if (roadAggression < 180)
+        if (roadAggression < 184)
         {
             roadAggression++;
             roadAggression++;
@@ -23,7 +23,7 @@ public static class Overlord
 
     public static void updateRoofIndex()
     {
-        if (roofAggression < 180)
+        if (roofAggression < 184)
         {
             roofAggression++;
             roofAggression++;
@@ -32,7 +32,7 @@ public static class Overlord
 
     public static void updateLeftWallIndex()
     {
-        if (leftWallAggression < 180)
+        if (leftWallAggression < 184)
         {
             leftWallAggression++;
             leftWallAggression++;
@@ -41,7 +41,7 @@ public static class Overlord
 
     public static void updateRightWallIndex()
     {
-        if (rightWallAggression < 180)
+        if (rightWallAggression < 184)
         {
             rightWallAggression++;
             rightWallAggression++;

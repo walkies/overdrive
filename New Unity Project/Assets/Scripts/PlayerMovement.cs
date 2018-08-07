@@ -30,45 +30,43 @@ public class PlayerMovement : MonoBehaviour
         {
             if (currentLane == 2)
             {
-                // if (speed >= 5.5)
-                //  {     
+                if (speed >= 8)
+                {     
                 LeanTween.moveLocal(gameObject, new Vector3(transform.position.x +1.5f, transform.position.y+1.5f, transform.position.z), (12 / speed));
                 lockOut = Time.time + (12 / speed);
                 LeanTween.rotate(gameObject.transform.GetChild(0).gameObject, new Vector3(0, 180, 270), (12 / speed));
                 currentLane++;
-                //}
+                }
             }
             else if (currentLane == 5)
             {
-                //  if (speed >= 8)
-                // {
+                if (speed >= 12)
+                {
                 LeanTween.moveLocal(gameObject, new Vector3(transform.position.x - 1.5f, transform.position.y + 1.5f, transform.position.z), (12 / speed));
                 LeanTween.rotate(gameObject.transform.GetChild(0).gameObject, new Vector3(0, 180, 180), (12 / speed));
                 lockOut = Time.time + (12 / speed);
                 currentLane++;
-
-                // }
+                }
             }
             else if (currentLane == 8)
             {
-                //if (speed >= 8)
-                // {
+                if (speed >= 12)
+                {
                 LeanTween.moveLocal(gameObject, new Vector3(transform.position.x - 1.5f, transform.position.y - 1.5f, transform.position.z), (12 / speed));
                 LeanTween.rotate(gameObject.transform.GetChild(0).gameObject, new Vector3(0, 180, 90), (12 / speed));
                 lockOut = Time.time + (12 / speed);
                 currentLane++;
-
-                //}
+                }
             }
             else if (currentLane == 11)
             {
-                //if (speed >= 5.5)
-                //{
+                if (speed >= 8)
+                {
                 lockOut = Time.time + (12 / speed);
                 LeanTween.moveLocal(gameObject, new Vector3(transform.position.x + 1.5f, transform.position.y - 1.5f, transform.position.z), (12 / speed));
                 LeanTween.rotate(gameObject.transform.GetChild(0).gameObject, new Vector3(0, 180, 0), (12 / speed));
                 currentLane = 0;
-                // }
+                }
             }
             else if (currentLane >= 0 && currentLane <= 1)
             {
@@ -107,44 +105,44 @@ public class PlayerMovement : MonoBehaviour
         {
             if (currentLane == 0)
             {
-                // if (speed >= 5.5)
-                // {            
+                if (speed >= 8)
+                {            
                 LeanTween.moveLocal(gameObject, new Vector3(transform.position.x - 1.5f, transform.position.y + 1.5f, transform.position.z), (12 / speed));
                 lockOut = Time.time + (12 / speed);
                 LeanTween.rotate(gameObject.transform.GetChild(0).gameObject, new Vector3(0, 180, 90), (12 / speed));
                 currentLane = 11;
-                //  }
+                }
             }
             else if (currentLane == 9)
             {
                 lockOut = Time.time + timeCount;
-                // if (speed >= 8)
-                // {
+                if (speed >= 12)
+                {
                 LeanTween.moveLocal(gameObject, new Vector3(transform.position.x + 1.5f, transform.position.y + 1.5f, transform.position.z), (12 / speed));
                 lockOut = Time.time + (12 / speed);
                 LeanTween.rotate(gameObject.transform.GetChild(0).gameObject, new Vector3(0, 180, 180), (12 / speed));
                 currentLane--;
-                //}
+                }
             }
             else if (currentLane == 6)
             {
-                // if (speed >= 8)
-                // {
+                if (speed >= 12)
+                {
                 LeanTween.moveLocal(gameObject, new Vector3(transform.position.x + 1.5f, transform.position.y - 1.5f, transform.position.z), (12 / speed));
                 lockOut = Time.time + (12 / speed);
                 LeanTween.rotate(gameObject.transform.GetChild(0).gameObject, new Vector3(0, 180, 270), (12 / speed));
                 currentLane--;
-                // }
+                }
             }
             else if (currentLane == 3)
             {
-                //if (speed >= 5.5)
-                // {
+                if (speed >= 8)
+                {
                 LeanTween.moveLocal(gameObject, new Vector3(transform.position.x - 1.5f, transform.position.y - 1.5f, transform.position.z), (12 / speed));
                 lockOut = Time.time + (12 / speed);
                 LeanTween.rotate(gameObject.transform.GetChild(0).gameObject, new Vector3(0, 180, 0), (12 / speed));
                 currentLane--;
-                //}
+                }
             }
             else if (currentLane >= 1 && currentLane <= 2)
             {

@@ -9,11 +9,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 37a61374603367c408a51f9081396e05, type: 3}
-  m_Name: Splosion!
+  m_Name: backfire
   m_EditorClassIdentifier: 
   clips:
-  - {fileID: 8300000, guid: 538326d092f10e849b64be6a5df3f8c5, type: 3}
-  - {fileID: 8300000, guid: 0424ab7fb3d14e84dbd91f3ab412ce58, type: 3}
-  - {fileID: 8300000, guid: 62fcab70c9a1a004281d8885b294556e, type: 3}
-  VolumeRange: {x: 0.79130435, y: 0.9}
-  PitchRange: {x: -0.32330906, y: 1.0631257}
+  - {fileID: 8300000, guid: 47c2237d5e3ae10419d16f65d49c7e39, type: 3}
+  VolumeRange: {x: 0, y: 0.07692294}
+  PitchRange: {x: 0.72307694, y: 0.9076923}
