@@ -8,6 +8,8 @@ public class ScriptableStats : ScriptableObject
     public float Acceleration;
     public float topSpeed;
     public Specials thisSpecial;
+    public int cooldownTime;
+    public int activeTime;
 
     public enum Specials
     {

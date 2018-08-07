@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public ScriptableStats sS;
-
+    public Abilities ability;
     public int currentLane = 1;
     public float speed;
     private float timeCount;
@@ -21,6 +21,11 @@ public class PlayerMovement : MonoBehaviour
     {
         timeCount = (3 / speed);
         #region Input
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            ability.ActivateAbility(sS.thisSpecial.ToString());
+        }
+
         if (Input.GetKeyDown(KeyCode.LeftArrow) && Time.time > lockOut)
         {
             if (currentLane == 2)
