@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class CountDown : MonoBehaviour {
 
+    public int destroyTime = 30;
+
 	void Start ()
     {
-        Destroy(gameObject, 30);
+        Destroy(gameObject, destroyTime);
 	}
 }

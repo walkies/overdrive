@@ -9,28 +9,47 @@ public static class Overlord
     public static int leftWallAggression = 0;
     public static int rightWallAggression = 0;
 
+    public static int activateReset = 3;
+
     public static void updateRoadIndex()
     {
-        roadAggression++;
-        roadAggression++;
-        roadAggression++;
+        if (roadAggression < 180)
+        {
+            roadAggression++;
+            roadAggression++;
+            roadAggression++;
+        }
     }
 
     public static void updateRoofIndex()
     {
-        roofAggression++;
-        roofAggression++;
+        if (roofAggression < 180)
+        {
+            roofAggression++;
+            roofAggression++;
+        }
     }
 
     public static void updateLeftWallIndex()
     {
-        leftWallAggression++;
-        leftWallAggression++;
+        if (leftWallAggression < 180)
+        {
+            leftWallAggression++;
+            leftWallAggression++;
+        }
     }
 
     public static void updateRightWallIndex()
     {
-        rightWallAggression++;
-        rightWallAggression++;
+        if (rightWallAggression < 180)
+        {
+            rightWallAggression++;
+            rightWallAggression++;
+        }
+    }
+
+    public static void ActivateReset()
+    {
+        activateReset++;
     }
 }

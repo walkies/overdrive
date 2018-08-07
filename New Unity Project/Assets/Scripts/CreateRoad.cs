@@ -4,17 +4,23 @@ using UnityEngine;
 
 public class CreateRoad : MonoBehaviour
 {
-    public List <GameObject> Tiles = new List<GameObject>();
+    public List<GameObject> Tiles = new List<GameObject>();
+    public GameObject vision;
+    public GameObject visionPanel;
     private int tileLength = 300;
     public float PosZ;
 
     public void Awake()
     {
+        #region Tiles
         Tiles.Add(Resources.Load<GameObject>("Roof"));
         Tiles.Add(Resources.Load<GameObject>("Road"));
         Tiles.Add(Resources.Load<GameObject>("LeftWall"));
         Tiles.Add(Resources.Load<GameObject>("RightWall"));
+        #endregion
         PosZ = transform.position.z;
+        vision = (Resources.Load<GameObject>("Vision"));
+        visionPanel = (Resources.Load<GameObject>("VisionPanel")); ;
     }
 
     ///<Summary>
@@ -35,8 +41,20 @@ public class CreateRoad : MonoBehaviour
         var go = Instantiate(Tiles[tileindex], new Vector3(transform.position.x, transform.position.y, PosZ), Quaternion.identity, transform.parent);
         go.AddComponent<CreateRoad>();
         go.AddComponent<BoxCollider>().isTrigger = true;
-        go.GetComponent<BoxCollider>().size = new Vector3(110, 110, 110);
+        go.GetComponent<BoxCollider>().size = new Vector3(160, 160, 160);
     }
+
+    public void CameraRoad()
+    {
+        Instantiate(visionPanel, new Vector3(transform.position.x -1, transform.position.y + 2.8f, PosZ), Quaternion.Euler(90,0,0), transform.parent);
+        Instantiate(vision, new Vector3(9.08f, 1.42f, 5.44f), Quaternion.Euler(0, 180, 0), transform.parent);
+    }
+
+    public void ResetRoad()
+    {
+        PosZ = 0;
+    }
+
 
 
     ///<Summary>
@@ -51,28 +69,60 @@ public class CreateRoad : MonoBehaviour
         {
             if (gameObject.CompareTag("Roof"))
             {
-                StartCoroutine("CreateRoofTile");
+                if (FindObjectOfType<ResetPos>() == true)
+                {
+                    ResetRoad();
+                    StartCoroutine("CreateRoofTile");
+                }
+                else
+                {
+                    StartCoroutine("CreateRoofTile");
+                }
             }
             else if (gameObject.CompareTag("Road"))
             {
-                StartCoroutine("CreateRoadTile");
+                if (FindObjectOfType<ResetPos>() == true)
+                {
+                    ResetRoad();
+                    StartCoroutine("CreateRoadTile");
+                }
+                else
+                {
+                    StartCoroutine("CreateRoadTile");
+                }
             }
             else if (gameObject.CompareTag("LeftWall"))
             {
-                StartCoroutine("CreateLeftWallTile");
+                if (FindObjectOfType<ResetPos>() == true)
+                {
+                    ResetRoad();
+                    StartCoroutine("CreateLeftWallTile");
+                }
+                else
+                {
+                    StartCoroutine("CreateLeftWallTile");
+                }
             }
             else if (gameObject.CompareTag("RightWall"))
             {
-                StartCoroutine("CreateRightWallTile");
+                if (FindObjectOfType<ResetPos>() == true)
+                {
+                    ResetRoad();
+                    StartCoroutine("CreateRightWallTile");
+                }
+                else
+                {
+                    StartCoroutine("CreateRightWallTile");
+                }
             }
-           // Resources.UnloadUnusedAssets();
         }
     }
+
     private IEnumerator CreateRoofTile()
     {
         for (int i = 0; i < tileLength; i++)
         {
-            yield return new WaitForSeconds(0.01f);
+            yield return new WaitForSeconds(0.001f);
             if (i < (tileLength - 1))
             {
                 Lay(0);
@@ -92,7 +142,7 @@ public class CreateRoad : MonoBehaviour
     {
         for (int i = 0; i < tileLength; i++)
         {
-            yield return new WaitForSeconds(0.01f);
+            yield return new WaitForSeconds(0.001f);
             if (i < (tileLength - 1))
             {
                 Lay(1);
@@ -100,8 +150,19 @@ public class CreateRoad : MonoBehaviour
             }
             else if (i == (tileLength - 1))
             {
-                LayWithCreateRoad(1); //laywith turn
-                PosZ--;
+                if (Overlord.activateReset % 27 == 0)
+                {
+                    CameraRoad();
+                    LayWithCreateRoad(1);
+                    PosZ--;
+                    Overlord.ActivateReset();
+                }
+                else
+                {
+                    LayWithCreateRoad(1);
+                    PosZ--;
+                    Overlord.ActivateReset();
+                }
             }
         }
         Overlord.updateRoadIndex();
@@ -112,7 +173,7 @@ public class CreateRoad : MonoBehaviour
     {
         for (int i = 0; i < tileLength; i++)
         {
-            yield return new WaitForSeconds(0.01f);
+            yield return new WaitForSeconds(0.001f);
             if (i < (tileLength - 1))
             {
                 Lay(2);
@@ -132,7 +193,7 @@ public class CreateRoad : MonoBehaviour
     {
         for (int i = 0; i < tileLength; i++)
         {
-            yield return new WaitForSeconds(0.01f);
+            yield return new WaitForSeconds(0.001f);
             if (i < (tileLength - 1))
             {
                 Lay(3);

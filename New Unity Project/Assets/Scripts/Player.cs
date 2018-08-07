@@ -15,6 +15,6 @@ public class Player : MonoBehaviour {
 
 	public void Update ()
     {
-        transform.position -= transform.forward * Time.deltaTime * pM.speed;
+        transform.position += transform.forward * Time.deltaTime * pM.speed;
     }
 }

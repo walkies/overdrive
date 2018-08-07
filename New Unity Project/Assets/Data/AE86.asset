@@ -11,8 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81a9312581429d6498cd873dfb4a422b, type: 3}
   m_Name: AE86
   m_EditorClassIdentifier: 
-  Health: 0
-  Acceleration: 0.2
-  topSpeed: 14
-  laneSwitch: 10
+  Acceleration: 0.3
+  topSpeed: 25
   thisSpecial: 0
+  cooldownTime: 0
+  activeTime: 0

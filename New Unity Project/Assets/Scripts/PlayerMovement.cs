@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
                 //  {     
                 LeanTween.moveLocal(gameObject, new Vector3(transform.position.x +1.5f, transform.position.y+1.5f, transform.position.z), (12 / speed));
                 lockOut = Time.time + (12 / speed);
-                LeanTween.rotate(gameObject.transform.GetChild(0).gameObject, new Vector3(0, 0, 90), (12 / speed));
+                LeanTween.rotate(gameObject.transform.GetChild(0).gameObject, new Vector3(0, 180, 270), (12 / speed));
                 currentLane++;
                 //}
             }
@@ -43,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
                 //  if (speed >= 8)
                 // {
                 LeanTween.moveLocal(gameObject, new Vector3(transform.position.x - 1.5f, transform.position.y + 1.5f, transform.position.z), (12 / speed));
-                LeanTween.rotate(gameObject.transform.GetChild(0).gameObject, new Vector3(0, 0, 180), (12 / speed));
+                LeanTween.rotate(gameObject.transform.GetChild(0).gameObject, new Vector3(0, 180, 180), (12 / speed));
                 lockOut = Time.time + (12 / speed);
                 currentLane++;
 
@@ -54,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
                 //if (speed >= 8)
                 // {
                 LeanTween.moveLocal(gameObject, new Vector3(transform.position.x - 1.5f, transform.position.y - 1.5f, transform.position.z), (12 / speed));
-                LeanTween.rotate(gameObject.transform.GetChild(0).gameObject, new Vector3(0, 0, 270), (12 / speed));
+                LeanTween.rotate(gameObject.transform.GetChild(0).gameObject, new Vector3(0, 180, 90), (12 / speed));
                 lockOut = Time.time + (12 / speed);
                 currentLane++;
 
@@ -66,7 +66,7 @@ public class PlayerMovement : MonoBehaviour
                 //{
                 lockOut = Time.time + (12 / speed);
                 LeanTween.moveLocal(gameObject, new Vector3(transform.position.x + 1.5f, transform.position.y - 1.5f, transform.position.z), (12 / speed));
-                LeanTween.rotate(gameObject.transform.GetChild(0).gameObject, new Vector3(0, 0, 0), (12 / speed));
+                LeanTween.rotate(gameObject.transform.GetChild(0).gameObject, new Vector3(0, 180, 0), (12 / speed));
                 currentLane = 0;
                 // }
             }
@@ -111,7 +111,7 @@ public class PlayerMovement : MonoBehaviour
                 // {            
                 LeanTween.moveLocal(gameObject, new Vector3(transform.position.x - 1.5f, transform.position.y + 1.5f, transform.position.z), (12 / speed));
                 lockOut = Time.time + (12 / speed);
-                LeanTween.rotate(gameObject.transform.GetChild(0).gameObject, new Vector3(0, 0, 270), (12 / speed));
+                LeanTween.rotate(gameObject.transform.GetChild(0).gameObject, new Vector3(0, 180, 90), (12 / speed));
                 currentLane = 11;
                 //  }
             }
@@ -122,7 +122,7 @@ public class PlayerMovement : MonoBehaviour
                 // {
                 LeanTween.moveLocal(gameObject, new Vector3(transform.position.x + 1.5f, transform.position.y + 1.5f, transform.position.z), (12 / speed));
                 lockOut = Time.time + (12 / speed);
-                LeanTween.rotate(gameObject.transform.GetChild(0).gameObject, new Vector3(0, 0, 180), (12 / speed));
+                LeanTween.rotate(gameObject.transform.GetChild(0).gameObject, new Vector3(0, 180, 180), (12 / speed));
                 currentLane--;
                 //}
             }
@@ -132,7 +132,7 @@ public class PlayerMovement : MonoBehaviour
                 // {
                 LeanTween.moveLocal(gameObject, new Vector3(transform.position.x + 1.5f, transform.position.y - 1.5f, transform.position.z), (12 / speed));
                 lockOut = Time.time + (12 / speed);
-                LeanTween.rotate(gameObject.transform.GetChild(0).gameObject, new Vector3(0, 0, 90), (12 / speed));
+                LeanTween.rotate(gameObject.transform.GetChild(0).gameObject, new Vector3(0, 180, 270), (12 / speed));
                 currentLane--;
                 // }
             }
@@ -142,7 +142,7 @@ public class PlayerMovement : MonoBehaviour
                 // {
                 LeanTween.moveLocal(gameObject, new Vector3(transform.position.x - 1.5f, transform.position.y - 1.5f, transform.position.z), (12 / speed));
                 lockOut = Time.time + (12 / speed);
-                LeanTween.rotate(gameObject.transform.GetChild(0).gameObject, new Vector3(0, 0, 0), (12 / speed));
+                LeanTween.rotate(gameObject.transform.GetChild(0).gameObject, new Vector3(0, 180, 0), (12 / speed));
                 currentLane--;
                 //}
             }

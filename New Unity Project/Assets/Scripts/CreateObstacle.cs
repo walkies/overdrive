@@ -12,7 +12,8 @@ public class CreateObstacle : MonoBehaviour
 
     void Start()
     {
-        Destroy(gameObject, 45);
+
+        Destroy(gameObject, (40 - (Overlord.activateReset/3)));
 
         posX = transform.position.x;
         posY = transform.position.y;

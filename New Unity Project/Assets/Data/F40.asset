@@ -11,8 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81a9312581429d6498cd873dfb4a422b, type: 3}
   m_Name: F40
   m_EditorClassIdentifier: 
-  Health: 0
-  Acceleration: 0.4
-  topSpeed: 25
-  laneSwitch: 10
+  Acceleration: 0.6
+  topSpeed: 33
   thisSpecial: 1
+  cooldownTime: 0
+  activeTime: 0
