@@ -7,7 +7,7 @@ public class CreateRoad : MonoBehaviour
     public List<GameObject> Tiles = new List<GameObject>();
     public GameObject vision;
     public GameObject visionPanel;
-    private int tileLength = 300;
+    private int tileLength = 400;
     public float PosZ;
 
     public void Awake()
@@ -41,7 +41,7 @@ public class CreateRoad : MonoBehaviour
         var go = Instantiate(Tiles[tileindex], new Vector3(transform.position.x, transform.position.y, PosZ), Quaternion.identity, transform.parent);
         go.AddComponent<CreateRoad>();
         go.AddComponent<BoxCollider>().isTrigger = true;
-        go.GetComponent<BoxCollider>().size = new Vector3(160, 160, 160);
+        go.GetComponent<BoxCollider>().size = new Vector3(200, 200, 200);
     }
 
     public void CameraRoad()

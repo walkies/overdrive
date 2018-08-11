@@ -17,7 +17,7 @@ public class CreateObstacle : MonoBehaviour
 
         posX = transform.position.x;
         posY = transform.position.y;
-        spawnIndex = Random.Range(0, 3);
+        spawnIndex = Random.Range(0, Obstacles.Length);
 
         if (gameObject.CompareTag("Roof"))
         {

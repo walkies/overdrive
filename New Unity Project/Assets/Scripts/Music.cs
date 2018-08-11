@@ -5,8 +5,8 @@ using UnityEngine;
 public class Music : MonoBehaviour
 {
     private AudioSource aS;
-    private float maximum = 0.4f;
-    private float minimum = 0.02f;
+    private float maximum = 0.3f;
+    private float minimum = 0.1f;
     void Start ()
     {
         aS = GetComponent<AudioSource>();      
@@ -15,8 +15,8 @@ public class Music : MonoBehaviour
 
 	void Update ()
     {
-        aS.volume = Mathf.Lerp(minimum, maximum, Time.time /1000);
-        aS.pitch = Mathf.Lerp(1, 1.2f, Time.time /1000);
+        aS.volume = Mathf.Lerp(minimum, maximum, Time.time /700);
+        aS.pitch = Mathf.Lerp(1, 1.2f, Time.time /820);
     }
 }
 ///<Summary>
