@@ -7,8 +7,11 @@ public class CreateRoad : MonoBehaviour
     public List<GameObject> Tiles = new List<GameObject>();
     public GameObject vision;
     public GameObject visionPanel;
-    private int tileLength = 400;
+    private int tileLength = 300;
     public float PosZ;
+    public int R = 0;
+    public int B = 0;
+    public int G = 0;
 
     public void Awake()
     {
@@ -17,6 +20,7 @@ public class CreateRoad : MonoBehaviour
         Tiles.Add(Resources.Load<GameObject>("Road"));
         Tiles.Add(Resources.Load<GameObject>("LeftWall"));
         Tiles.Add(Resources.Load<GameObject>("RightWall"));
+        Tiles.Add(Resources.Load<GameObject>("Roof2"));
         #endregion
         PosZ = transform.position.z;
         vision = (Resources.Load<GameObject>("Vision"));
@@ -28,7 +32,8 @@ public class CreateRoad : MonoBehaviour
     ///</Summary>
     public void Lay(int tileindex)
     {
-        Instantiate(Tiles[tileindex], new Vector3(transform.position.x, transform.position.y, PosZ), Quaternion.identity, transform.parent);
+        var go = Instantiate(Tiles[tileindex], new Vector3(transform.position.x, transform.position.y, PosZ), Quaternion.identity, transform.parent);
+            go.GetComponentInChildren<Renderer>().material.color = new Color(5, 0, 10, 0);
     }
 
     ///<Summary>
@@ -123,11 +128,19 @@ public class CreateRoad : MonoBehaviour
         for (int i = 0; i < tileLength; i++)
         {
             yield return new WaitForSeconds(0.001f);
-            if (i < (tileLength - 1))
+
+            if ((i % 20) == 0)
             {
                 Lay(0);
                 PosZ--;
             }
+
+            else if (i < (tileLength - 1))
+            {
+                Lay(4);
+                PosZ--;
+            }
+
             else if (i == (tileLength - 1))
             {
                 LayWithCreateRoad(0);
