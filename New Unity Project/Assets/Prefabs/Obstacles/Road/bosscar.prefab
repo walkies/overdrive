@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 114199542830511858}
   - component: {fileID: 65097554967896674}
   - component: {fileID: 114613165594756882}
+  - component: {fileID: 114055408373800206}
   m_Layer: 0
   m_Name: bosscar
   m_TagString: Untagged
@@ -127,6 +128,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.8, y: 0.6, z: 2}
   m_Center: {x: 0, y: 0, z: 0.2}
+--- !u!114 &114055408373800206
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1578450803429784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5e34b16219397948a048b4326a8a9a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114199542830511858
 MonoBehaviour:
   m_ObjectHideFlags: 1
