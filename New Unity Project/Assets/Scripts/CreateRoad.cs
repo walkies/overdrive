@@ -47,7 +47,7 @@ public class CreateRoad : MonoBehaviour
     public void CameraRoad()
     {
         Instantiate(visionPanel, new Vector3(transform.position.x -1, transform.position.y + 2.8f, PosZ), Quaternion.Euler(90,0,0), transform.parent);
-        Instantiate(vision, new Vector3(9.08f, 1.42f, 5.44f), Quaternion.Euler(0, 180, 0), transform.parent);
+        Instantiate(vision, new Vector3(9.08f, 1.42f, 3.44f), Quaternion.Euler(0, 180, 0), transform.parent);
     }
 
     public void ResetRoad()
