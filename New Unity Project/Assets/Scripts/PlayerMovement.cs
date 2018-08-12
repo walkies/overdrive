@@ -4,22 +4,42 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public UI uI;
     public ScriptableStats sS;
     public Abilities ability;
     public int currentLane = 1;
     public float speed;
     private float timeCount;
     public float lockOut;
+    public float oneLaneBonus;
 
 
     void Start()
     {
-
+        uI = FindObjectOfType<UI>();
     }
 
     void Update()
     {
+        Overlord.ScoreOverTime();
         timeCount = (3 / speed);
+        #region LaneBonus
+        if (Input.anyKeyDown != true)
+        {
+            oneLaneBonus += Time.deltaTime;
+            if (oneLaneBonus >= 5)
+            {
+                uI.ScoreLaneBonus.gameObject.SetActive(true);
+                Overlord.ScoreOneLane();
+            }
+        }
+        else
+        {
+            uI.ScoreLaneBonus.gameObject.SetActive(false);
+            oneLaneBonus = 0;
+        }
+        #endregion
+
         #region Input
         if (Input.GetKeyDown(KeyCode.Space))
         {

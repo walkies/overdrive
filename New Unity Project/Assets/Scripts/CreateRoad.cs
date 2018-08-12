@@ -46,7 +46,7 @@ public class CreateRoad : MonoBehaviour
         var go = Instantiate(Tiles[tileindex], new Vector3(transform.position.x, transform.position.y, PosZ), Quaternion.identity, transform.parent);
         go.AddComponent<CreateRoad>();
         go.AddComponent<BoxCollider>().isTrigger = true;
-        go.GetComponent<BoxCollider>().size = new Vector3(200, 200, 200);
+        go.GetComponent<BoxCollider>().size = new Vector3(150, 150, 150);
     }
 
     public void CameraRoad()

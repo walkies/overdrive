@@ -6,7 +6,14 @@ using UnityEngine.UI;
 public class UI : MonoBehaviour
 {
     public float timer;
+    public float closeCallTimer;
+    public int multiplier = 0;
     public Text inGameTime;
+    public Text inGameScore;
+    public Text ScoreLaneBonus;
+    public Text closeCall;
+    public Text HighScore;
+    public Text EndScore;
 
     public void Start()
     {
@@ -14,9 +21,31 @@ public class UI : MonoBehaviour
     }
 
     public void Update()
-    {
+    {      
+        if (closeCallTimer <= 0)
+        {
+            multiplier = 0;
+            closeCall.gameObject.SetActive(false);
+        }
+        else if (closeCallTimer > 0)
+        {
+            closeCallTimer -= Time.deltaTime;
+        }
+
         timer = Time.fixedUnscaledTime;
         inGameTime.text = (" " + timer.ToString("F4"));
+        inGameScore.text = (" " + Overlord.currentScore.ToString());
+        closeCall.text = ("Pass Bonus x" + multiplier.ToString());
+        HighScore.text = (" " + PlayerPrefs.GetInt("HS"));
+        EndScore.text = (" " + Overlord.currentScore.ToString());
+    }
+
+    public void CloseCall()
+    {
+        multiplier++;
+        closeCall.gameObject.SetActive(true);
+        Overlord.ScoreCloseCall(multiplier);
+        closeCallTimer = closeCallTimer + 0.8f;
     }
 
 }

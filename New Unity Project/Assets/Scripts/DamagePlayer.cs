@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DamagePlayer : MonoBehaviour
 {
+    public UI uI;
     public Health hp;
     public PlayerMovement pM;
     public Camera mainCam;
@@ -13,6 +14,7 @@ public class DamagePlayer : MonoBehaviour
 
     void Start ()
     {
+        uI = FindObjectOfType<UI>();
         hp = FindObjectOfType<Health>();
         pM = FindObjectOfType<PlayerMovement>();
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
@@ -37,6 +39,7 @@ public class DamagePlayer : MonoBehaviour
         else if (col.gameObject.CompareTag("Sound"))
         {
             aSO.Play();
+            uI.StartCoroutine("CloseCall");
         }
     }
     
