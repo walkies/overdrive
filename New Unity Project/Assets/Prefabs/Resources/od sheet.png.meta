@@ -207,10 +207,10 @@ TextureImporter:
       name: od sheet_0
       rect:
         serializedVersion: 2
-        x: 19
-        y: 5
-        width: 44
-        height: 194
+        x: 15
+        y: 2
+        width: 50
+        height: 198
       alignment: 9
       pivot: {x: 0.50000006, y: 0.49137804}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -227,10 +227,10 @@ TextureImporter:
       name: od sheet_1
       rect:
         serializedVersion: 2
-        x: 87
+        x: 83
         y: 0
-        width: 45
-        height: 197
+        width: 50
+        height: 200
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -247,10 +247,10 @@ TextureImporter:
       name: od sheet_2
       rect:
         serializedVersion: 2
-        x: 156
+        x: 153
         y: 0
-        width: 44
-        height: 197
+        width: 51
+        height: 200
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -267,10 +267,10 @@ TextureImporter:
       name: od sheet_3
       rect:
         serializedVersion: 2
-        x: 225
+        x: 221
         y: 0
-        width: 45
-        height: 197
+        width: 50
+        height: 200
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -287,10 +287,10 @@ TextureImporter:
       name: od sheet_4
       rect:
         serializedVersion: 2
-        x: 294
+        x: 289
         y: 0
-        width: 45
-        height: 197
+        width: 55
+        height: 200
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -307,10 +307,10 @@ TextureImporter:
       name: od sheet_5
       rect:
         serializedVersion: 2
-        x: 363
+        x: 359
         y: 0
-        width: 46
-        height: 197
+        width: 50
+        height: 200
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -327,10 +327,10 @@ TextureImporter:
       name: od sheet_6
       rect:
         serializedVersion: 2
-        x: 432
+        x: 428
         y: 0
-        width: 45
-        height: 196
+        width: 52
+        height: 200
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -347,10 +347,10 @@ TextureImporter:
       name: od sheet_7
       rect:
         serializedVersion: 2
-        x: 501
+        x: 496
         y: 0
-        width: 46
-        height: 197
+        width: 51
+        height: 200
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -367,10 +367,10 @@ TextureImporter:
       name: od sheet_8
       rect:
         serializedVersion: 2
-        x: 570
+        x: 565
         y: 0
-        width: 44
-        height: 197
+        width: 52
+        height: 200
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -387,10 +387,10 @@ TextureImporter:
       name: od sheet_9
       rect:
         serializedVersion: 2
-        x: 639
+        x: 632
         y: 0
-        width: 44
-        height: 197
+        width: 55
+        height: 200
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

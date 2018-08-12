@@ -76,7 +76,8 @@ public static class Overlord
         if (HighScore < currentScore)
         {
             HighScore = currentScore;
+            PlayerPrefs.SetInt("HS", HighScore);
         }
-        PlayerPrefs.SetInt("HS", HighScore);
+     
     }
 }
