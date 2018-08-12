@@ -62,7 +62,7 @@ public class UI : MonoBehaviour
         multiplier++;
         closeCall.gameObject.SetActive(true);
         Overlord.ScoreCloseCall(multiplier);
-        closeCallTimer = closeCallTimer + 0.8f;
+        closeCallTimer = closeCallTimer + 0.75f;
     }
 
     public IEnumerator RevsActivate()
