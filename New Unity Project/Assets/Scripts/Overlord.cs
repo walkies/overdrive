@@ -73,6 +73,7 @@ public static class Overlord
     }
     public static void HighScoreUpdate()
     {
+        HighScore = PlayerPrefs.GetInt("HS");
         if (HighScore < currentScore)
         {
             HighScore = currentScore;
