@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: F40
   m_EditorClassIdentifier: 
   Acceleration: 0.6
-  topSpeed: 33
+  topSpeed: 34
   thisSpecial: 1
   cooldownTime: 0
   activeTime: 0
