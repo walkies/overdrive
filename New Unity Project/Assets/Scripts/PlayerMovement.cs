@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public LaneBonus lB;
     public UI uI;
     public ScriptableStats sS;
     public Abilities ability;
@@ -16,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+
         uI = FindObjectOfType<UI>();
     }
 
@@ -35,6 +37,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
+            lB.Switch = false;
             uI.ScoreLaneBonus.gameObject.SetActive(false);
             oneLaneBonus = 0;
         }

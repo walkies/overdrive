@@ -553,7 +553,7 @@ Light:
   m_Type: 2
   m_Color: {r: 0.47058827, g: 0.07450981, b: 0.12941177, a: 1}
   m_Intensity: 4
-  m_Range: 0.5
+  m_Range: 1
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -589,7 +589,7 @@ Light:
   m_Type: 2
   m_Color: {r: 0.47058827, g: 0.07450981, b: 0.12941177, a: 1}
   m_Intensity: 4
-  m_Range: 0.5
+  m_Range: 1
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -625,7 +625,7 @@ Light:
   m_Type: 2
   m_Color: {r: 0.47058827, g: 0.07450981, b: 0.12941177, a: 1}
   m_Intensity: 4
-  m_Range: 0.5
+  m_Range: 1
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -661,7 +661,7 @@ Light:
   m_Type: 2
   m_Color: {r: 0.47058827, g: 0.07450981, b: 0.12941177, a: 1}
   m_Intensity: 4
-  m_Range: 0.5
+  m_Range: 1
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -697,7 +697,7 @@ Light:
   m_Type: 2
   m_Color: {r: 0.47058827, g: 0.07450981, b: 0.12941177, a: 1}
   m_Intensity: 4
-  m_Range: 0.5
+  m_Range: 1
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -756,6 +756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7f244196bb31d44890187299ebbf4d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uI: {fileID: 0}
   hp: {fileID: 0}
   pM: {fileID: 0}
   mainCam: {fileID: 0}

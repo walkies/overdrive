@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LaneBonus : MonoBehaviour
 {
-    private bool Switch;
+    public bool Switch;
 
     public void Update()
     {
@@ -22,6 +22,7 @@ public class LaneBonus : MonoBehaviour
         LeanTween.scale(gameObject, new Vector3(0.9f, 0.9f, 0.9f), 1);
         yield return new WaitForSeconds(1);
         Switch = false;
+        StopCoroutine("LerpScale");
     }
 
 }

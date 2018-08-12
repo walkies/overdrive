@@ -1788,6 +1788,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2640a212c1611794993e00cd42026edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Switch: 0
 --- !u!1 &453403387
 GameObject:
   m_ObjectHideFlags: 0
@@ -1818,6 +1819,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c1332fb40c202e4f9377d497a263df0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lB: {fileID: 449737855}
   uI: {fileID: 0}
   sS: {fileID: 11400000, guid: b9fe0707bd5f0cc49bd888afeacad0a0, type: 2}
   ability: {fileID: 0}
