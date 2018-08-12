@@ -15,6 +15,7 @@ TagManager:
   - Roof
   - TurnPoint
   - Sound
+  - EndPanel
   layers:
   - Default
   - TransparentFX

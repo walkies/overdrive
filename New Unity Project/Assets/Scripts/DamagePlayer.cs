@@ -8,7 +8,7 @@ public class DamagePlayer : MonoBehaviour
     public Health hp;
     public PlayerMovement pM;
     public Camera mainCam;
-    public Canvas endScreen;
+    public GameObject endScreen;
     public AudioEffectSO aSO;
     public AudioEffectSO crash;
 
@@ -18,7 +18,7 @@ public class DamagePlayer : MonoBehaviour
         hp = FindObjectOfType<Health>();
         pM = FindObjectOfType<PlayerMovement>();
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-        endScreen = FindObjectOfType<Canvas>();
+        endScreen = GameObject.FindGameObjectWithTag("EndPanel");
     }
 
     public void OnTriggerEnter(Collider col)
