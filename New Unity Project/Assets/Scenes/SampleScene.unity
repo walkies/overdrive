@@ -5489,6 +5489,9 @@ MonoBehaviour:
   vision: {fileID: 0}
   visionPanel: {fileID: 0}
   PosZ: 0
+  R: 0
+  B: 0
+  G: 0
 --- !u!114 &63546263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6449,6 +6452,9 @@ MonoBehaviour:
   vision: {fileID: 0}
   visionPanel: {fileID: 0}
   PosZ: 0
+  R: 0
+  B: 0
+  G: 0
 --- !u!65 &394138898
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6832,6 +6838,9 @@ MonoBehaviour:
   vision: {fileID: 0}
   visionPanel: {fileID: 0}
   PosZ: 0
+  R: 0
+  B: 0
+  G: 0
 --- !u!65 &476881967
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6946,6 +6955,9 @@ MonoBehaviour:
   vision: {fileID: 0}
   visionPanel: {fileID: 0}
   PosZ: 0
+  R: 0
+  B: 0
+  G: 0
 --- !u!65 &481408076
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7452,6 +7464,9 @@ MonoBehaviour:
   vision: {fileID: 0}
   visionPanel: {fileID: 0}
   PosZ: 0
+  R: 0
+  B: 0
+  G: 0
 --- !u!65 &661066400
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7633,6 +7648,9 @@ MonoBehaviour:
   vision: {fileID: 0}
   visionPanel: {fileID: 0}
   PosZ: 0
+  R: 0
+  B: 0
+  G: 0
 --- !u!114 &679573820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8119,6 +8137,9 @@ MonoBehaviour:
   vision: {fileID: 0}
   visionPanel: {fileID: 0}
   PosZ: 0
+  R: 0
+  B: 0
+  G: 0
 --- !u!114 &842319781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18049,6 +18070,9 @@ MonoBehaviour:
   vision: {fileID: 0}
   visionPanel: {fileID: 0}
   PosZ: 0
+  R: 0
+  B: 0
+  G: 0
 --- !u!65 &1527273318
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18423,6 +18447,9 @@ MonoBehaviour:
   vision: {fileID: 0}
   visionPanel: {fileID: 0}
   PosZ: 0
+  R: 0
+  B: 0
+  G: 0
 --- !u!65 &1645800102
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18537,6 +18564,9 @@ MonoBehaviour:
   vision: {fileID: 0}
   visionPanel: {fileID: 0}
   PosZ: 0
+  R: 0
+  B: 0
+  G: 0
 --- !u!65 &1676508082
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19345,6 +19375,9 @@ MonoBehaviour:
   vision: {fileID: 0}
   visionPanel: {fileID: 0}
   PosZ: 0
+  R: 0
+  B: 0
+  G: 0
 --- !u!65 &2032024506
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19459,6 +19492,9 @@ MonoBehaviour:
   vision: {fileID: 0}
   visionPanel: {fileID: 0}
   PosZ: 0
+  R: 0
+  B: 0
+  G: 0
 --- !u!65 &2146998675
 BoxCollider:
   m_ObjectHideFlags: 0
