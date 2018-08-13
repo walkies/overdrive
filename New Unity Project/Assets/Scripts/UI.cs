@@ -43,7 +43,7 @@ public class UI : MonoBehaviour
         closeCall.text = ("Pass Bonus x" + multiplier.ToString());
         HighScore.text = (" " + PlayerPrefs.GetInt("HS"));
         EndScore.text = (" " + Overlord.currentScore.ToString());
-        ScaleBonus.text = ("x" + Overlord.scaleBonus/27);
+        ScaleBonus.text = ("Bonus Multiplier: x" + Overlord.scaleBonus/27);
     }
 
     public void CloseCall()

@@ -17,8 +17,8 @@ public class CreateRoad : MonoBehaviour
 
     public void Awake()
     {
-        R = Random.Range(1, 10);
-        B = Random.Range(1, 10);
+        R = Random.Range(2, 10);
+        B = Random.Range(2, 10);
         #region Tiles
         Tiles.Add(Resources.Load<GameObject>("Roof"));
         Tiles.Add(Resources.Load<GameObject>("Road"));
