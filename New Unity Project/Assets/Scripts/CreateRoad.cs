@@ -9,12 +9,16 @@ public class CreateRoad : MonoBehaviour
     public GameObject visionPanel;
     private int tileLength = 300;
     public float PosZ;
-    public int R = 0;
-    public int B = 0;
-    public int G = 0;
+    [HideInInspector]
+    public int R;
+    [HideInInspector]
+    public int B;
+
 
     public void Awake()
     {
+        R = Random.Range(1, 10);
+        B = Random.Range(1, 10);
         #region Tiles
         Tiles.Add(Resources.Load<GameObject>("Roof"));
         Tiles.Add(Resources.Load<GameObject>("Road"));
@@ -33,7 +37,9 @@ public class CreateRoad : MonoBehaviour
     public void Lay(int tileindex)
     {
         var go = Instantiate(Tiles[tileindex], new Vector3(transform.position.x, transform.position.y, PosZ), Quaternion.identity, transform.parent);
-            go.GetComponentInChildren<Renderer>().material.color = new Color(5, 0, 10, 0);
+            go.GetComponentInChildren<Renderer>().material.color = new Color(R, 0, B, 0);
+       // R = Random.Range(0, 10);
+       // B = Random.Range(0, 10);
     }
 
     ///<Summary>

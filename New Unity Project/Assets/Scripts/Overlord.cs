@@ -9,6 +9,7 @@ public static class Overlord
     public static int leftWallAggression = 0;
     public static int rightWallAggression = 0;
 
+    public static int scaleBonus = 27;
     public static int activateReset = 3;
     public static int currentScore = 0;
     public static int HighScore;
@@ -53,6 +54,7 @@ public static class Overlord
     public static void ActivateReset()
     {
         activateReset++;
+        scaleBonus++;
     }
 
     public static void ScoreOverTime()
@@ -61,7 +63,7 @@ public static class Overlord
     }
     public static void ScoreCloseCall(int multiplier)
     {
-        currentScore = currentScore + (multiplier * 100);
+        currentScore = currentScore + (multiplier * (100 * (scaleBonus/27)));
     }
     public static void ScoreOneLane()
     {
@@ -69,7 +71,7 @@ public static class Overlord
     }
     public static void ScoreDestroyTarget()
     {
-        currentScore = currentScore + 5000;
+        currentScore = currentScore + (4000 * (scaleBonus/27));
     }
     public static void HighScoreUpdate()
     {

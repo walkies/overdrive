@@ -17,9 +17,9 @@ public class LaneBonus : MonoBehaviour
     public IEnumerator LerpScale()
     {
         Switch = true;
-        LeanTween.scale(gameObject, new Vector3(0.8f, 0.8f, 0.8f), 1);
-        yield return new WaitForSeconds(1);
         LeanTween.scale(gameObject, new Vector3(0.6f, 0.6f, 0.6f), 1);
+        yield return new WaitForSeconds(1);
+        LeanTween.scale(gameObject, new Vector3(0.5f, 0.5f, 0.5f), 1);
         yield return new WaitForSeconds(1);
         Switch = false;
         StopCoroutine("LerpScale");

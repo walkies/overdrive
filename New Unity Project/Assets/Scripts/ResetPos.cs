@@ -8,7 +8,7 @@ public class ResetPos : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player"))
         {
-            col.gameObject.transform.position = new Vector3(col.gameObject.transform.position.x, col.gameObject.transform.position.y, 5);
+            col.gameObject.transform.position = new Vector3(col.gameObject.transform.position.x, col.gameObject.transform.position.y, 10);
         }
     } 
 }

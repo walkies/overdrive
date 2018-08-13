@@ -16,6 +16,7 @@ public class UI : MonoBehaviour
     public Text closeCall;
     public Text HighScore;
     public Text EndScore;
+    public Text ScaleBonus;
     #endregion
 
     public void Start()
@@ -42,6 +43,7 @@ public class UI : MonoBehaviour
         closeCall.text = ("Pass Bonus x" + multiplier.ToString());
         HighScore.text = (" " + PlayerPrefs.GetInt("HS"));
         EndScore.text = (" " + Overlord.currentScore.ToString());
+        ScaleBonus.text = ("x" + Overlord.scaleBonus/27);
     }
 
     public void CloseCall()
