@@ -9,7 +9,7 @@ public class Story : MonoBehaviour
     public Text story;
     void Start()
     {
-        StartCoroutine(AnimateText("After all crime has been successfully wiped from the future, officers are sent back in time to chase down and hunt some of the worst criminals.                                                                          Through the magic of science, the future cops have been able to pipeline all traffic into a single stream making it easy to track and hunt criminals."));
+        StartCoroutine(AnimateText("In the future, all crimes have been successfully wiped from the streets.                                            Bored, and in fear of losing their careers, the future cops built a time tunnel using the magic of science.                                                                                                                  Into it, they put all the past crimes. You are Max O’Verdrive, a future cop of the clan O’Verdrive with a passion for justice and a cool car.                                                                              It’s time to keep the street clean.                                                                                 Of crimes."));
     }
 
     void Update()
@@ -24,10 +24,8 @@ public class Story : MonoBehaviour
         while (i < strComplete.Length)
         {
             str += strComplete[i++];
-            yield return new WaitForSeconds(0.08F);
+            yield return new WaitForSeconds(0.055F);
         }
-        yield return new WaitForSeconds(3);
-        StartCoroutine(AnimateText("Max O’verDrive from the O'verDrive clan, a space cop from the future with a passion for justice, is traversing this pipeline and hunting wanted criminals while preserving the integrity of the future."));
         yield return new WaitForSeconds(18);
         StopAllCoroutines();
     }
