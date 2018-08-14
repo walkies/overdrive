@@ -9,6 +9,7 @@ public static class Overlord
     public static int leftWallAggression = 0;
     public static int rightWallAggression = 0;
 
+    public static int powerUpMax = 200;
     public static int scaleBonus = 27;
     public static int activateReset = 3;
     public static int currentScore = 0;
@@ -53,6 +54,7 @@ public static class Overlord
 
     public static void ActivateReset()
     {
+        powerUpMax = powerUpMax + 5;
         activateReset++;
         scaleBonus++;
     }

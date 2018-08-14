@@ -5,13 +5,14 @@ using UnityEngine.UI;
 
 public class Abilities : MonoBehaviour
 {
+    public UI ui;
     public Weapons currentWeapon;
     public PlayerMovement pM;
 
     public GameObject[] weapons;
 
-    public Image selectedWeaponImage;
-    public Image[] weaponsImages;
+    public Sprite selectedWeaponImage;
+    public Sprite[] weaponsImages;
 
     private int weaponSelect;
     private int selectedWeapon;
@@ -26,6 +27,10 @@ public class Abilities : MonoBehaviour
         Bagpipe
     }
 
+    void Start()
+    {
+        selectedWeaponImage = weaponsImages[0];
+    }
     void Update()
     {
         Debug.Log(currentWeapon);
@@ -89,15 +94,31 @@ public class Abilities : MonoBehaviour
 
     public IEnumerator RandomWeapon()
     {
-        weaponSelect = Random.Range(0, 14);
+        Debug.Log("called");
+        weaponSelect = Random.Range(1, 15);
 
         for (int i = 0; i < weaponSelect; i++)
         {
-            selectedWeaponImage = weaponsImages[i];
+            selectedWeaponImage = weaponsImages[(i + 1)];
             yield return new WaitForSeconds((0.1f * i));
         }
+        LeanTween.scale(ui.Weapon.gameObject, new Vector3(0.7f, 0.7f, 0.7f), 0.4f);
+        yield return new WaitForSeconds((0.4f));
+        LeanTween.scale(ui.Weapon.gameObject, new Vector3(0.6f, 0.6f, 0.6f), 0.4f);
 
-        selectedWeapon = (weaponSelect / 3) + 1;
+        if(selectedWeapon <= 5)
+        {
+            selectedWeapon = (weaponSelect);
+        }
+        if(selectedWeapon >= 6 && selectedWeapon <= 10)
+        {
+            selectedWeapon = (weaponSelect - 5);
+        }
+        if (selectedWeapon >= 11 && selectedWeapon <= 15)
+        {
+            selectedWeapon = (weaponSelect - 10);
+        }
+       
 
         if ((int) Weapons.Minigun == selectedWeapon)
         {

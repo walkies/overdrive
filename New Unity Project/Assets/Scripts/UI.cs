@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class UI : MonoBehaviour
 {
     #region Variables
+    public Abilities aB;
     public PlayerMovement pM;
     public float timer;
     public float closeCallTimer;
@@ -17,6 +18,7 @@ public class UI : MonoBehaviour
     public Text HighScore;
     public Text EndScore;
     public Text ScaleBonus;
+    public Image Weapon;
     #endregion
 
     public void Start()
@@ -44,6 +46,7 @@ public class UI : MonoBehaviour
         HighScore.text = (" " + PlayerPrefs.GetInt("HS"));
         EndScore.text = (" " + Overlord.currentScore.ToString());
         ScaleBonus.text = ("Bonus Multiplier: x" + Overlord.scaleBonus/27);
+        Weapon.sprite = aB.selectedWeaponImage;
     }
 
     public void CloseCall()
