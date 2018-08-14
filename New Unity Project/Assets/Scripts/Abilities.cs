@@ -1,64 +1,127 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class Abilities : MonoBehaviour
 {
-    public States currentState;
+    public Weapons currentWeapon;
     public PlayerMovement pM;
 
-    void Start()
-    {
-        pM = GetComponent<PlayerMovement>();
-    }
+    public GameObject[] weapons;
 
-    public enum States
+    public Image selectedWeaponImage;
+    public Image[] weaponsImages;
+
+    private int weaponSelect;
+    private int selectedWeapon;
+
+    public enum Weapons
     {
-        Charging,
-        Ready
+        Empty,
+        Minigun,
+        Laser,
+        Rocket,
+        Bomb,
+        Bagpipe
     }
 
     void Update()
     {
-        Debug.Log(currentState);
-        switch (currentState)   //Switch between states 
+        Debug.Log(currentWeapon);
+        switch (currentWeapon)   //Switch between states 
         {
-            case (States.Charging):
+            case (Weapons.Empty):
                 break;
-            case (States.Ready):
+            case (Weapons.Minigun):
+                break;
+            case (Weapons.Laser):
+                break;
+            case (Weapons.Rocket):
+                break;
+            case (Weapons.Bomb):
+                break;
+            case (Weapons.Bagpipe):
                 break;
         }
     }
-    public void ActivateAbility(string abilityName)
+    public void ActivateWeapon()
     {
-        if (currentState == States.Ready)
+        if (currentWeapon == Weapons.Empty)
         {
-            if (abilityName == "Sturdy")
-            {
-                StartCoroutine("Sturdy");
-            }
-            currentState = States.Charging;
+            // do nothing 
         }
-
-        if (currentState == States.Charging)
+        else if (currentWeapon == Weapons.Minigun)
         {
-            StartCoroutine("Cooldown");
+            weapons[0].SetActive(true);
+            StartCoroutine("FireMinigun");
+        }
+        else if (currentWeapon == Weapons.Rocket)
+        {
+            weapons[1].SetActive(true);
+            //rocket function
+        }
+        else if (currentWeapon == Weapons.Laser)
+        {
+            weapons[2].SetActive(true);
+            //laser function
+        }
+        else if (currentWeapon == Weapons.Bomb)
+        {
+            weapons[3].SetActive(true);
+            //bomb function
+        }
+        else if (currentWeapon == Weapons.Bagpipe)
+        {
+            weapons[4].SetActive(true);
+            //Bagpipe function
         }
     }
 
-    public IEnumerator Cooldown()
+    public IEnumerator FireMinigun()
     {
-        yield return new WaitForSeconds(pM.sS.cooldownTime);
-        currentState = States.Ready;
-        StopCoroutine("Cooldown");
+        yield return new WaitForSeconds(1);
+        //invoke repeating 
+        yield return new WaitForSeconds(1);
+        weapons[0].SetActive(false);
+        currentWeapon = Weapons.Empty;
     }
 
-    public IEnumerator Sturdy()
+    public IEnumerator RandomWeapon()
     {
-        pM.GetComponentInChildren<BoxCollider>().enabled = false;
-        yield return new WaitForSeconds(pM.sS.activeTime);
-        pM.GetComponentInChildren<BoxCollider>().enabled = true;
-        StopCoroutine("Sturdy");
+        weaponSelect = Random.Range(0, 14);
+
+        for (int i = 0; i < weaponSelect; i++)
+        {
+            selectedWeaponImage = weaponsImages[i];
+            yield return new WaitForSeconds((0.1f * i));
+        }
+
+        selectedWeapon = (weaponSelect / 3) + 1;
+
+        if ((int) Weapons.Minigun == selectedWeapon)
+        {
+            currentWeapon = Weapons.Minigun;
+        }
+
+        else if ((int)Weapons.Rocket == selectedWeapon)
+        {
+            currentWeapon = Weapons.Rocket;
+        }
+
+        else if ((int)Weapons.Laser == selectedWeapon)
+        {
+            currentWeapon = Weapons.Laser;
+        }
+
+        else if ((int)Weapons.Bomb == selectedWeapon)
+        {
+            currentWeapon = Weapons.Bomb;
+        }
+
+        else if ((int)Weapons.Bagpipe == selectedWeapon)
+        {
+            currentWeapon = Weapons.Bagpipe;
+        }
     }
 }
