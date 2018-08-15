@@ -18,6 +18,7 @@ TagManager:
   - EndPanel
   - Boss
   - Obstacle
+  - IntroMusic
   layers:
   - Default
   - TransparentFX

@@ -83,7 +83,17 @@ public class StateMachine : MonoBehaviour
 
     public void Play()
     {
+        DestroyGameObjectsWithTag("IntroMusic");
         SceneManager.LoadScene("SampleScene");
+    }
+
+    public static void DestroyGameObjectsWithTag(string tag)
+    {
+        GameObject[] gameObjects = GameObject.FindGameObjectsWithTag(tag);
+        foreach (GameObject target in gameObjects)
+        {
+            GameObject.Destroy(target);
+        }
     }
 
 }
