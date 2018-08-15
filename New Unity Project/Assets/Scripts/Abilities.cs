@@ -5,11 +5,21 @@ using UnityEngine.UI;
 
 public class Abilities : MonoBehaviour
 {
+    [Header("References")]
+
     public UI ui;
-    public Weapons currentWeapon;
     public PlayerMovement pM;
 
+    [Header("Start State")]
+
+    public Weapons currentWeapon;
+
     public GameObject[] weapons;
+    [Header("Mini Gun")]
+
+    public Minigun mG;
+
+    [Header("Weapon Images")]
 
     public Sprite selectedWeaponImage;
     public Sprite[] weaponsImages;
@@ -29,7 +39,7 @@ public class Abilities : MonoBehaviour
 
     void Start()
     {
-        selectedWeaponImage = weaponsImages[0];
+        //selectedWeaponImage = weaponsImages[0];
     }
     void Update()
     {
@@ -86,8 +96,15 @@ public class Abilities : MonoBehaviour
     public IEnumerator FireMinigun()
     {
         yield return new WaitForSeconds(1);
-        //invoke repeating 
+        //replace with tween
+        weapons[0].transform.GetChild(0).transform.position = new Vector3 (weapons[0].transform.GetChild(0).transform.position.x, weapons[0].transform.GetChild(0).transform.position.y + 0.2f, weapons[0].transform.GetChild(0).transform.position.z);
         yield return new WaitForSeconds(1);
+        mG.InvokeRepeating("Fire", 0, 0.1f);
+        yield return new WaitForSeconds(5);
+        mG.CancelInvoke("Fire");
+        yield return new WaitForSeconds(1);
+        //replace with tween
+        weapons[0].transform.GetChild(0).transform.position = new Vector3(weapons[0].transform.GetChild(0).transform.position.x, weapons[0].transform.GetChild(0).transform.position.y - 0.2f, weapons[0].transform.GetChild(0).transform.position.z);  
         weapons[0].SetActive(false);
         currentWeapon = Weapons.Empty;
     }
