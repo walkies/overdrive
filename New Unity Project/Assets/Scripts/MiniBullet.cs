@@ -5,6 +5,9 @@ using UnityEngine;
 public class MiniBullet : MonoBehaviour
 {
     public Renderer rend;
+    public Rigidbody rb;
+    public GameObject l;
+
     void Start()
     {
         rend = GetComponent<Renderer>();
@@ -12,7 +15,7 @@ public class MiniBullet : MonoBehaviour
     }
 	void Update ()
     {
-        transform.position -= transform.forward;
+        rb.AddForce(-transform.forward * 2000);
 	}
 
     public void Colour()
@@ -21,8 +24,20 @@ public class MiniBullet : MonoBehaviour
         rend.material.color = newColor;
     }
 
-    public void OnTriggerEnter()
-    {
-
+    public void OnTriggerEnter(Collider col)
+    {    
+        if (col.gameObject.CompareTag("Boss"))
+        {
+            col.gameObject.GetComponent<Health>().health--;
+            l.SetActive(true);
+            Destroy(gameObject, 0.01f);
+        }
+        if (col.gameObject.CompareTag("Obstacle"))
+        {
+            Debug.Log("works");
+            col.gameObject.GetComponent<Health>().health--;
+            l.SetActive(true);
+            Destroy(gameObject, 0.01f);
+        }
     }
 }

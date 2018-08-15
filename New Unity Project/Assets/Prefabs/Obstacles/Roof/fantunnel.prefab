@@ -23,9 +23,10 @@ GameObject:
   - component: {fileID: 114466684598501196}
   - component: {fileID: 65139059147019318}
   - component: {fileID: 108587917574787806}
+  - component: {fileID: 114138199091871998}
   m_Layer: 0
   m_Name: fantunnel
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -296,6 +297,18 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114138199091871998
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1208527782366962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7349c225b09ad85479d33730d441c6ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 3
 --- !u!114 &114174328374089210
 MonoBehaviour:
   m_ObjectHideFlags: 1

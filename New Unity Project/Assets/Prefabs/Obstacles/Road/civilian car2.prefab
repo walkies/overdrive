@@ -23,9 +23,10 @@ GameObject:
   - component: {fileID: 114080532845369198}
   - component: {fileID: 65344858000463640}
   - component: {fileID: 114161786022676470}
+  - component: {fileID: 114094434780795740}
   m_Layer: 0
   m_Name: civilian car2
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -276,7 +277,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.8, y: 0.6, z: 2}
+  m_Size: {x: 0.8, y: 0.7, z: 2}
   m_Center: {x: 0, y: 0, z: 0.2}
 --- !u!108 &108205991170917018
 Light:
@@ -470,12 +471,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uI: {fileID: 0}
-  hp: {fileID: 0}
   pM: {fileID: 0}
   mainCam: {fileID: 0}
   endScreen: {fileID: 0}
   aSO: {fileID: 11400000, guid: 611490512ea8a7b4cb8c22a759efc2ad, type: 2}
   crash: {fileID: 11400000, guid: 0a69a5401bcd9d748b3f62500c34d75e, type: 2}
+  hp: {fileID: 0}
 --- !u!114 &114080532845369198
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -488,6 +489,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTime: 30
+--- !u!114 &114094434780795740
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1072646190283106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7349c225b09ad85479d33730d441c6ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 3
 --- !u!114 &114161786022676470
 MonoBehaviour:
   m_ObjectHideFlags: 1

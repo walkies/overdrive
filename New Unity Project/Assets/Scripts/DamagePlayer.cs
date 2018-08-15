@@ -5,17 +5,19 @@ using UnityEngine;
 public class DamagePlayer : MonoBehaviour
 {
     public UI uI;
-    public Health hp;
     public PlayerMovement pM;
     public Camera mainCam;
     public GameObject endScreen;
     public AudioEffectSO aSO;
     public AudioEffectSO crash;
+    public Health hp;
+
+
 
     void Start ()
     {
+        hp = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Health>();
         uI = FindObjectOfType<UI>();
-        hp = FindObjectOfType<Health>();
         pM = FindObjectOfType<PlayerMovement>();
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         endScreen = GameObject.FindGameObjectWithTag("EndPanel");

@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 114262296633107098}
   - component: {fileID: 114331118295755664}
   - component: {fileID: 65321158247585724}
+  - component: {fileID: 114904436967665480}
   m_Layer: 0
   m_Name: rightsign
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -223,3 +224,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTime: 30
+--- !u!114 &114904436967665480
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1187663275793488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7349c225b09ad85479d33730d441c6ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 3

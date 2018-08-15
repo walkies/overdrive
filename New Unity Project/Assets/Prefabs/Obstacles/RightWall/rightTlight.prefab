@@ -54,9 +54,10 @@ GameObject:
   - component: {fileID: 114136107078553530}
   - component: {fileID: 114403703947826624}
   - component: {fileID: 65888269997086274}
+  - component: {fileID: 114247676236389512}
   m_Layer: 0
   m_Name: rightTlight
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -343,6 +344,18 @@ MonoBehaviour:
   endScreen: {fileID: 0}
   aSO: {fileID: 11400000, guid: 611490512ea8a7b4cb8c22a759efc2ad, type: 2}
   crash: {fileID: 11400000, guid: 0a69a5401bcd9d748b3f62500c34d75e, type: 2}
+--- !u!114 &114247676236389512
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1779955370721180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7349c225b09ad85479d33730d441c6ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 2
 --- !u!114 &114403703947826624
 MonoBehaviour:
   m_ObjectHideFlags: 1

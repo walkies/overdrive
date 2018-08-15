@@ -39,9 +39,10 @@ GameObject:
   - component: {fileID: 65033769593912480}
   - component: {fileID: 114605283874201174}
   - component: {fileID: 114507235468621648}
+  - component: {fileID: 114537417194357478}
   m_Layer: 0
   m_Name: leftsigncars
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -211,6 +212,18 @@ MonoBehaviour:
   endScreen: {fileID: 0}
   aSO: {fileID: 11400000, guid: 611490512ea8a7b4cb8c22a759efc2ad, type: 2}
   crash: {fileID: 11400000, guid: 0a69a5401bcd9d748b3f62500c34d75e, type: 2}
+--- !u!114 &114537417194357478
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1307961485984246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7349c225b09ad85479d33730d441c6ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 3
 --- !u!114 &114605283874201174
 MonoBehaviour:
   m_ObjectHideFlags: 1
