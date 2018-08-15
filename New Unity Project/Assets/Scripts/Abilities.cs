@@ -19,10 +19,15 @@ public class Abilities : MonoBehaviour
 
     public Minigun mG;
 
+    [Header("Rocket")]
+    public int Ammo;
+    public Sprite[] rocketImages;
+
     [Header("Weapon Images")]
 
     public Sprite selectedWeaponImage;
     public Sprite[] weaponsImages;
+ 
 
     private int weaponSelect;
     private int selectedWeapon;
@@ -37,12 +42,12 @@ public class Abilities : MonoBehaviour
         Bagpipe
     }
 
-    void Start()
-    {
-        //selectedWeaponImage = weaponsImages[0];
-    }
     void Update()
     {
+        if (currentWeapon == Weapons.Empty)
+        {
+            selectedWeaponImage = weaponsImages[0];
+        }
         Debug.Log(currentWeapon);
         switch (currentWeapon)   //Switch between states 
         {
@@ -64,7 +69,7 @@ public class Abilities : MonoBehaviour
     {
         if (currentWeapon == Weapons.Empty)
         {
-            // do nothing 
+            
         }
         else if (currentWeapon == Weapons.Minigun)
         {
@@ -73,8 +78,16 @@ public class Abilities : MonoBehaviour
         }
         else if (currentWeapon == Weapons.Rocket)
         {
-            weapons[1].SetActive(true);
-            //rocket function
+            if (Ammo > 0)
+            {
+                Instantiate(weapons[1], transform.position, Quaternion.identity);
+                Ammo--;
+                selectedWeaponImage = rocketImages[Ammo];  
+            }
+            else
+            {
+                currentWeapon = Weapons.Empty;
+            }
         }
         else if (currentWeapon == Weapons.Laser)
         {

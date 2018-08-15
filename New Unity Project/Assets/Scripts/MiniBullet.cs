@@ -7,6 +7,8 @@ public class MiniBullet : MonoBehaviour
     public Renderer rend;
     public Rigidbody rb;
     public GameObject l;
+    public int damage;
+    public bool spin;
 
     void Start()
     {
@@ -15,7 +17,17 @@ public class MiniBullet : MonoBehaviour
     }
 	void Update ()
     {
-        rb.AddForce(-transform.forward * 2000);
+       
+        if (spin == true)
+        {
+            rb.AddForce(transform.forward * 500);
+            transform.Rotate(Vector3.forward * (120 * Time.deltaTime));
+            GetComponent<BoxCollider>().size = GetComponent<BoxCollider>().size + new Vector3 (1f, 1f, 1f) * Time.deltaTime;
+        }
+        else
+        {
+            rb.AddForce(-transform.forward * 2000);
+        }
 	}
 
     public void Colour()
@@ -28,14 +40,14 @@ public class MiniBullet : MonoBehaviour
     {    
         if (col.gameObject.CompareTag("Boss"))
         {
-            col.gameObject.GetComponent<Health>().health--;
+            col.gameObject.GetComponent<Health>().health = col.gameObject.GetComponent<Health>().health - damage;
             l.SetActive(true);
             Destroy(gameObject, 0.01f);
         }
         if (col.gameObject.CompareTag("Obstacle"))
         {
             Debug.Log("works");
-            col.gameObject.GetComponent<Health>().health--;
+            col.gameObject.GetComponent<Health>().health = col.gameObject.GetComponent<Health>().health - damage;
             l.SetActive(true);
             Destroy(gameObject, 0.01f);
         }

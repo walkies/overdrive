@@ -3147,7 +3147,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b6706588909e62843ade0b9bae5311e3, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b6706588909e62843ade0b9bae5311e3, type: 3}
       propertyPath: m_LocalScale.x
@@ -3858,7 +3858,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1445583139
 MonoBehaviour:
@@ -5039,6 +5039,16 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 453403389}
     m_Modifications:
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weapons.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: rocketImages.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4409378839652608, guid: 160b230bcb814104d9e304d3f7c58885, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -5125,6 +5135,45 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weapons.Array.data[1]
+      value: 
+      objectReference: {fileID: 1533965133124980, guid: df8f7a11e98cb83459fc1419718dcf5a,
+        type: 2}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: currentWeapon
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: selectedWeaponImage
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: Ammo
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: rocketImages.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 58bf03308006eb041a7d8331d0c8b170,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: rocketImages.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 53dd255a08b280d418b76b97e0a4ba8d,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: rocketImages.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 5439bef6ff995494f83c16f0bf887a9b,
+        type: 3}
     m_RemovedComponents:
     - {fileID: 114142869106694978, guid: 160b230bcb814104d9e304d3f7c58885, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 160b230bcb814104d9e304d3f7c58885, type: 2}
