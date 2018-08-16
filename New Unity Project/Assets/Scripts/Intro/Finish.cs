@@ -20,7 +20,7 @@ public class Finish : MonoBehaviour
 
     IEnumerator EndIntro()
     {
-        yield return new WaitForSeconds(53);
+        yield return new WaitForSeconds(41);
         SceneManager.LoadScene("MainMenu");
     }
 

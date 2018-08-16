@@ -257,9 +257,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 178941820}
   tempColor: {r: 0, g: 0, b: 0, a: 0}
-  timeToActivate: 3
+  timeToActivate: 0
   alpha: 0.0065
-  timeToWait: 23
+  timeToWait: 15
   intervals: 0.2
 --- !u!1 &314229741
 GameObject:
@@ -412,7 +412,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 380983964}
   tempColor: {r: 0, g: 0, b: 0, a: 0}
-  timeToActivate: 44
+  timeToActivate: 34
   alpha: 0.03
   timeToWait: 7
   intervals: 0.05

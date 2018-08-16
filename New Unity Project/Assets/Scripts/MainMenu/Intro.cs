@@ -28,6 +28,7 @@ public class Intro : MonoBehaviour
     {
         Timer = true;
         yield return new WaitForSeconds(60);
+        Destroy(GameObject.FindGameObjectWithTag("IntroMusic"));
         SceneManager.LoadScene("Intro");
     }
 

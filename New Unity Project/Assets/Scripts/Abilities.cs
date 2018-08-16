@@ -23,11 +23,14 @@ public class Abilities : MonoBehaviour
     public int Ammo;
     public Sprite[] rocketImages;
 
+    [Header("Laser")]
+    public LineRenderer lR;
+
     [Header("Weapon Images")]
 
     public Sprite selectedWeaponImage;
     public Sprite[] weaponsImages;
- 
+
 
     private int weaponSelect;
     private int selectedWeapon;
@@ -69,7 +72,7 @@ public class Abilities : MonoBehaviour
     {
         if (currentWeapon == Weapons.Empty)
         {
-            
+
         }
         else if (currentWeapon == Weapons.Minigun)
         {
@@ -82,7 +85,7 @@ public class Abilities : MonoBehaviour
             {
                 Instantiate(weapons[1], transform.position, Quaternion.identity);
                 Ammo--;
-                selectedWeaponImage = rocketImages[Ammo];  
+                selectedWeaponImage = rocketImages[Ammo];
             }
             else
             {
@@ -92,7 +95,7 @@ public class Abilities : MonoBehaviour
         else if (currentWeapon == Weapons.Laser)
         {
             weapons[2].SetActive(true);
-            //laser function
+            StartCoroutine("FireLaser");
         }
         else if (currentWeapon == Weapons.Bomb)
         {
@@ -110,14 +113,11 @@ public class Abilities : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         //replace with tween
-        weapons[0].transform.GetChild(0).transform.position = new Vector3 (weapons[0].transform.GetChild(0).transform.position.x, weapons[0].transform.GetChild(0).transform.position.y + 0.2f, weapons[0].transform.GetChild(0).transform.position.z);
-        yield return new WaitForSeconds(1);
         mG.InvokeRepeating("Fire", 0, 0.1f);
         yield return new WaitForSeconds(5);
         mG.CancelInvoke("Fire");
         yield return new WaitForSeconds(1);
         //replace with tween
-        weapons[0].transform.GetChild(0).transform.position = new Vector3(weapons[0].transform.GetChild(0).transform.position.x, weapons[0].transform.GetChild(0).transform.position.y - 0.2f, weapons[0].transform.GetChild(0).transform.position.z);  
         weapons[0].SetActive(false);
         currentWeapon = Weapons.Empty;
     }
@@ -136,11 +136,11 @@ public class Abilities : MonoBehaviour
         yield return new WaitForSeconds((0.4f));
         LeanTween.scale(ui.Weapon.gameObject, new Vector3(0.6f, 0.6f, 0.6f), 0.4f);
 
-        if(selectedWeapon <= 5)
+        if (selectedWeapon <= 5)
         {
             selectedWeapon = (weaponSelect);
         }
-        if(selectedWeapon >= 6 && selectedWeapon <= 10)
+        if (selectedWeapon >= 6 && selectedWeapon <= 10)
         {
             selectedWeapon = (weaponSelect - 5);
         }
@@ -148,15 +148,16 @@ public class Abilities : MonoBehaviour
         {
             selectedWeapon = (weaponSelect - 10);
         }
-       
 
-        if ((int) Weapons.Minigun == selectedWeapon)
+
+        if ((int)Weapons.Minigun == selectedWeapon)
         {
             currentWeapon = Weapons.Minigun;
         }
 
         else if ((int)Weapons.Rocket == selectedWeapon)
         {
+            Ammo = 3;
             currentWeapon = Weapons.Rocket;
         }
 
@@ -174,5 +175,32 @@ public class Abilities : MonoBehaviour
         {
             currentWeapon = Weapons.Bagpipe;
         }
+    }
+
+    public IEnumerator FireLaser()
+    {
+        yield return new WaitForSeconds(1);
+        lR.SetPosition(0, weapons[2].transform.position);
+        Debug.Log("set pos" + weapons[2].transform.position);
+
+        RaycastHit[] hits;
+        hits = Physics.RaycastAll(weapons[2].transform.position, transform.forward, 1000.0F);
+
+        for (int i = 0; i < hits.Length; i++)
+        {
+            Debug.DrawLine(i == 0 ? transform.position : hits[i - 1].point, hits[i].point, Color.green, 1.2f);
+
+            if (hits[i].collider.gameObject.CompareTag("Boss") || hits[i].collider.gameObject.CompareTag("Obstacle"))
+            {
+                RaycastHit hit = hits[i];
+                lR.SetPosition(1, (weapons[2].transform.position - new Vector3 (weapons[2].transform.position.x, weapons[2].transform.position.y, weapons[2].transform.position.z - 1000)));
+                Debug.Log("set pos" + i + hit.point);
+                //hit.transform.GetComponent<Health>().health = hit.transform.GetComponent<Health>().health - 3;
+            }
+        }
+        yield return new WaitForSeconds(1);
+        StopCoroutine("FireLaser");
+        lR.SetPosition(1, weapons[2].transform.position);
+        weapons[2].SetActive(false);
     }
 }

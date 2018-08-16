@@ -24,9 +24,9 @@ public class Story : MonoBehaviour
         while (i < strComplete.Length)
         {
             str += strComplete[i++];
-            yield return new WaitForSeconds(0.045F);
+            yield return new WaitForSeconds(0.020F);
         }
-        yield return new WaitForSeconds(18);
+        yield return new WaitForSeconds(10);
         StopAllCoroutines();
     }
 

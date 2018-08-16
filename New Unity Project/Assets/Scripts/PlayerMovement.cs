@@ -47,7 +47,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             ability.ActivateWeapon();
-        }
+        }  
 
         if (Input.GetKeyDown(KeyCode.LeftArrow) && Time.time > lockOut)
         {
