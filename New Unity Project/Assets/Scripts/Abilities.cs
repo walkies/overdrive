@@ -179,6 +179,7 @@ public class Abilities : MonoBehaviour
 
     public IEnumerator FireLaser()
     {
+        lR.enabled = true;
         yield return new WaitForSeconds(1);
         lR.SetPosition(0, weapons[2].transform.position);
         Debug.Log("set pos" + weapons[2].transform.position);
@@ -193,13 +194,14 @@ public class Abilities : MonoBehaviour
             if (hits[i].collider.gameObject.CompareTag("Boss") || hits[i].collider.gameObject.CompareTag("Obstacle"))
             {
                 RaycastHit hit = hits[i];
-                lR.SetPosition(1, (weapons[2].transform.position - new Vector3 (weapons[2].transform.position.x, weapons[2].transform.position.y, weapons[2].transform.position.z - 1000)));
+                lR.SetPosition(1, (weapons[2].transform.position + new Vector3 (weapons[2].transform.position.x, weapons[2].transform.position.y, weapons[2].transform.position.z - 5000)));
                 Debug.Log("set pos" + i + hit.point);
                 //hit.transform.GetComponent<Health>().health = hit.transform.GetComponent<Health>().health - 3;
             }
         }
         yield return new WaitForSeconds(1);
         StopCoroutine("FireLaser");
+        lR.enabled = false;
         lR.SetPosition(1, weapons[2].transform.position);
         weapons[2].SetActive(false);
     }
