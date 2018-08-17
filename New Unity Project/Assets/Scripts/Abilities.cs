@@ -25,6 +25,7 @@ public class Abilities : MonoBehaviour
 
     [Header("Laser")]
     public LineRenderer lR;
+    public Light chargeUp;
 
     [Header("Weapon Images")]
 
@@ -50,6 +51,10 @@ public class Abilities : MonoBehaviour
         if (currentWeapon == Weapons.Empty)
         {
             selectedWeaponImage = weaponsImages[0];
+        }
+        if (currentWeapon == Weapons.Laser)
+        {
+            lR.SetPosition(0, weapons[2].transform.position);
         }
         Debug.Log(currentWeapon);
         switch (currentWeapon)   //Switch between states 
@@ -179,30 +184,40 @@ public class Abilities : MonoBehaviour
 
     public IEnumerator FireLaser()
     {
-        lR.enabled = true;
-        yield return new WaitForSeconds(1);
-        lR.SetPosition(0, weapons[2].transform.position);
-        Debug.Log("set pos" + weapons[2].transform.position);
-
+        for (int i = 0; i < 20; i++)
+        {
+            chargeUp.range += 0.025f;
+            yield return new WaitForSeconds(0.05f);
+        }
         RaycastHit[] hits;
-        hits = Physics.RaycastAll(weapons[2].transform.position, transform.forward, 1000.0F);
+        hits = Physics.RaycastAll(weapons[2].transform.position, transform.forward, 3000.0F);
 
         for (int i = 0; i < hits.Length; i++)
         {
-            Debug.DrawLine(i == 0 ? transform.position : hits[i - 1].point, hits[i].point, Color.green, 1.2f);
-
             if (hits[i].collider.gameObject.CompareTag("Boss") || hits[i].collider.gameObject.CompareTag("Obstacle"))
             {
                 RaycastHit hit = hits[i];
-                lR.SetPosition(1, (weapons[2].transform.position + new Vector3 (weapons[2].transform.position.x, weapons[2].transform.position.y, weapons[2].transform.position.z - 5000)));
-                Debug.Log("set pos" + i + hit.point);
-                //hit.transform.GetComponent<Health>().health = hit.transform.GetComponent<Health>().health - 3;
+                lR.SetPosition(1, (weapons[2].transform.position + new Vector3 (weapons[2].transform.position.x, weapons[2].transform.position.y, weapons[2].transform.position.z - 6000)));
+                lR.enabled = true;
+                hit.transform.GetComponent<Health>().health = hit.transform.GetComponent<Health>().health - 3;
             }
         }
-        yield return new WaitForSeconds(1);
+        for (int i = 0; i < 20; i++)
+        {
+            lR.startWidth += 0.01f;
+            yield return new WaitForSeconds(0.05f);
+        }
+        yield return new WaitForSeconds(1f);
+        for (int i = 0; i < 20; i++)
+        {
+            lR.startWidth -= 0.01f;
+            chargeUp.range -= 0.025f;
+            yield return new WaitForSeconds(0.05f);
+        }
         StopCoroutine("FireLaser");
         lR.enabled = false;
         lR.SetPosition(1, weapons[2].transform.position);
         weapons[2].SetActive(false);
+        currentWeapon = Weapons.Empty;
     }
 }
