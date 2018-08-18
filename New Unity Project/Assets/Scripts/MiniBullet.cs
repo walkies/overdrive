@@ -20,13 +20,13 @@ public class MiniBullet : MonoBehaviour
        
         if (spin == true)
         {
-            rb.AddForce(transform.forward * 500);
+            rb.AddForce(transform.forward * 1000);
             transform.Rotate(Vector3.forward * (120 * Time.deltaTime));
             GetComponent<BoxCollider>().size = GetComponent<BoxCollider>().size + new Vector3 (1f, 1f, 1f) * Time.deltaTime;
         }
         else
         {
-            rb.AddForce(-transform.forward * 2000);
+            rb.AddForce(-transform.forward * 3000);
         }
 	}
 

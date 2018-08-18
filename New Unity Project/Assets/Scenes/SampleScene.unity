@@ -5189,6 +5189,11 @@ Prefab:
       propertyPath: rocketImages.Array.size
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.size
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4409378839652608, guid: 160b230bcb814104d9e304d3f7c58885, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -5284,13 +5289,14 @@ Prefab:
     - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
         type: 2}
       propertyPath: currentWeapon
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
         type: 2}
       propertyPath: selectedWeaponImage
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 21300000, guid: 58bf03308006eb041a7d8331d0c8b170,
+        type: 3}
     - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
         type: 2}
       propertyPath: Ammo
@@ -5349,6 +5355,936 @@ Prefab:
       propertyPath: chargeUp
       value: 
       objectReference: {fileID: 1888079867}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[15]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[16]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[17]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[18]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[19]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[20]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[21]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[22]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[23]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[24]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[25]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[26]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[27]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[28]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[29]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[30]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[31]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[32]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[33]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[34]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[35]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[36]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[37]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[38]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[39]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[40]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[41]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[42]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[43]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[44]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[45]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[46]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[47]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[48]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[49]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[50]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[51]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[52]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[53]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[54]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[55]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[56]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[57]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[58]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[59]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[60]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[61]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[62]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[63]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[64]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[65]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[66]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[67]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[68]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[69]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[70]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[71]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[72]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[73]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[74]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[75]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[76]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[77]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[78]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[79]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[80]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[81]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[82]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[83]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[84]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[85]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[86]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[87]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[88]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[89]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[90]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[91]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[92]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[93]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[94]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[95]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[96]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[97]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[98]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[99]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[100]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[101]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[102]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[103]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[104]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[105]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[106]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[107]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[108]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[109]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[110]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[111]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[112]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[113]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[114]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[115]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[116]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[117]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[118]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[119]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[120]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[121]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[122]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[123]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[124]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[125]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[126]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[127]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[128]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[129]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[130]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[131]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[132]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[133]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[134]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[135]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[136]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[137]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[138]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[139]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[140]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[141]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[142]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[143]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[144]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[145]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[146]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[147]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[148]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[149]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[150]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[151]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[152]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[153]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[154]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[155]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[156]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[157]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[158]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[9]
+      value: 
+      objectReference: {fileID: 21300000, guid: e5d89a95ee3c7de4eafadd7247637d08,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[10]
+      value: 
+      objectReference: {fileID: 21300000, guid: d4d4f06e4286eb549b2380204b87d229,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[11]
+      value: 
+      objectReference: {fileID: 21300000, guid: f17876fed1738664facfba9f4af9a443,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[12]
+      value: 
+      objectReference: {fileID: 21300000, guid: 49a74f45890b7034a8ea7bce48b6da6a,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[13]
+      value: 
+      objectReference: {fileID: 21300000, guid: e5d89a95ee3c7de4eafadd7247637d08,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[14]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dd7be0975fec747a367778d126d86b,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: f17876fed1738664facfba9f4af9a443,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: 49a74f45890b7034a8ea7bce48b6da6a,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[6]
+      value: 
+      objectReference: {fileID: 21300000, guid: e5d89a95ee3c7de4eafadd7247637d08,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[7]
+      value: 
+      objectReference: {fileID: 21300000, guid: f17876fed1738664facfba9f4af9a443,
+        type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: weaponsImages.Array.data[8]
+      value: 
+      objectReference: {fileID: 21300000, guid: 49a74f45890b7034a8ea7bce48b6da6a,
+        type: 3}
     m_RemovedComponents:
     - {fileID: 114142869106694978, guid: 160b230bcb814104d9e304d3f7c58885, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 160b230bcb814104d9e304d3f7c58885, type: 2}
@@ -5376,6 +6312,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  Npc: 0
+  pS: {fileID: 0}
+  aS: {fileID: 0}
+  L: {fileID: 0}
 --- !u!114 &1904775918 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114158204816618004, guid: 160b230bcb814104d9e304d3f7c58885,

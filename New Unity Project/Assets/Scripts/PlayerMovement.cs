@@ -14,6 +14,10 @@ public class PlayerMovement : MonoBehaviour
     public float lockOut;
     public float oneLaneBonus;
 
+    void Awake()
+    {
+        Overlord.currentScore = 0;
+    }
 
     void Start()
     {

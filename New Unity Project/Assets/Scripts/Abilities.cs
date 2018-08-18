@@ -41,17 +41,11 @@ public class Abilities : MonoBehaviour
         Empty,
         Minigun,
         Laser,
-        Rocket,
-        Bomb,
-        Bagpipe
+        Rocket
     }
 
     void Update()
     {
-        if (currentWeapon == Weapons.Empty)
-        {
-            selectedWeaponImage = weaponsImages[0];
-        }
         if (currentWeapon == Weapons.Laser)
         {
             lR.SetPosition(0, weapons[2].transform.position);
@@ -66,10 +60,6 @@ public class Abilities : MonoBehaviour
             case (Weapons.Laser):
                 break;
             case (Weapons.Rocket):
-                break;
-            case (Weapons.Bomb):
-                break;
-            case (Weapons.Bagpipe):
                 break;
         }
     }
@@ -95,22 +85,13 @@ public class Abilities : MonoBehaviour
             else
             {
                 currentWeapon = Weapons.Empty;
+                selectedWeaponImage = weaponsImages[0];
             }
         }
         else if (currentWeapon == Weapons.Laser)
         {
             weapons[2].SetActive(true);
             StartCoroutine("FireLaser");
-        }
-        else if (currentWeapon == Weapons.Bomb)
-        {
-            weapons[3].SetActive(true);
-            //bomb function
-        }
-        else if (currentWeapon == Weapons.Bagpipe)
-        {
-            weapons[4].SetActive(true);
-            //Bagpipe function
         }
     }
 
@@ -125,60 +106,54 @@ public class Abilities : MonoBehaviour
         //replace with tween
         weapons[0].SetActive(false);
         currentWeapon = Weapons.Empty;
+        selectedWeaponImage = weaponsImages[0];
     }
 
     public IEnumerator RandomWeapon()
     {
         Debug.Log("called");
-        weaponSelect = Random.Range(1, 15);
+        weaponSelect = Random.Range(1, 9);
 
         for (int i = 0; i < weaponSelect; i++)
         {
             selectedWeaponImage = weaponsImages[(i + 1)];
-            yield return new WaitForSeconds((0.1f * i));
+            yield return new WaitForSeconds((0.5f * (i/2)));
         }
+        yield return new WaitForSeconds((1f));
         LeanTween.scale(ui.Weapon.gameObject, new Vector3(0.7f, 0.7f, 0.7f), 0.4f);
         yield return new WaitForSeconds((0.4f));
         LeanTween.scale(ui.Weapon.gameObject, new Vector3(0.6f, 0.6f, 0.6f), 0.4f);
 
-        if (selectedWeapon <= 5)
+        if (selectedWeapon <= 3)
         {
             selectedWeapon = (weaponSelect);
         }
-        if (selectedWeapon >= 6 && selectedWeapon <= 10)
+        if (selectedWeapon >= 4 && selectedWeapon <= 6)
         {
-            selectedWeapon = (weaponSelect - 5);
+            selectedWeapon = (weaponSelect - 3);
         }
-        if (selectedWeapon >= 11 && selectedWeapon <= 15)
+        if (selectedWeapon >= 7 && selectedWeapon <= 9)
         {
-            selectedWeapon = (weaponSelect - 10);
+            selectedWeapon = (weaponSelect - 6);
         }
-
 
         if ((int)Weapons.Minigun == selectedWeapon)
         {
+            selectedWeaponImage = weaponsImages[1];
             currentWeapon = Weapons.Minigun;
         }
 
         else if ((int)Weapons.Rocket == selectedWeapon)
         {
+            selectedWeaponImage = weaponsImages[2];
             Ammo = 3;
             currentWeapon = Weapons.Rocket;
         }
 
         else if ((int)Weapons.Laser == selectedWeapon)
         {
+            selectedWeaponImage = weaponsImages[3];
             currentWeapon = Weapons.Laser;
-        }
-
-        else if ((int)Weapons.Bomb == selectedWeapon)
-        {
-            currentWeapon = Weapons.Bomb;
-        }
-
-        else if ((int)Weapons.Bagpipe == selectedWeapon)
-        {
-            currentWeapon = Weapons.Bagpipe;
         }
     }
 
@@ -219,5 +194,6 @@ public class Abilities : MonoBehaviour
         lR.SetPosition(1, weapons[2].transform.position);
         weapons[2].SetActive(false);
         currentWeapon = Weapons.Empty;
+        selectedWeaponImage = weaponsImages[0];
     }
 }
