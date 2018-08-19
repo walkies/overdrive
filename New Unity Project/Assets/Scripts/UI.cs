@@ -18,12 +18,13 @@ public class UI : MonoBehaviour
     public Text HighScore;
     public Text EndScore;
     public Text ScaleBonus;
+    public Text crimeBonus;
     public Image Weapon;
     #endregion
 
     public void Start()
     {
-        
+        StartCoroutine("color");
     }
 
     public void Update()
@@ -54,7 +55,19 @@ public class UI : MonoBehaviour
         multiplier++;
         closeCall.gameObject.SetActive(true);
         Overlord.ScoreCloseCall(multiplier);
-        closeCallTimer = closeCallTimer + 0.78f;
+        closeCallTimer = closeCallTimer + 0.8f;
     }
 
+    public IEnumerator color()
+    {
+        crimeBonus.canvasRenderer.SetColor(Color.red);
+        yield return new WaitForSeconds(0.8f);
+        crimeBonus.canvasRenderer.SetColor(Color.blue);
+    }
+    public IEnumerator text()
+    {
+        crimeBonus.gameObject.SetActive(true);
+        yield return new WaitForSeconds(1);
+        crimeBonus.gameObject.SetActive(false);
+    }
 }

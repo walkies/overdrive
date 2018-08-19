@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
+    public UI uI;
     public int health;
     public bool Npc;
     public GameObject pS;
     public AudioSource aS;
     public Light L;
+
+    public void Start()
+    {
+        uI = FindObjectOfType<UI>(); 
+    }
 
     public void Update()
     {
@@ -18,17 +24,18 @@ public class Health : MonoBehaviour
             {
                 if (gameObject.CompareTag("Boss"))
                 {
-                    Overlord.ScoreDestroyTarget(4000);
+                    uI.StartCoroutine("text");
+                    Overlord.ScoreDestroyTarget(200);
                 }
                 else
                 {
-                    Overlord.ScoreDestroyTarget(1000);
+                    Overlord.ScoreDestroyTarget(50);
                 }
 
                 aS.enabled = true;
                 L.enabled = true;
                 pS.SetActive(true);
-                Destroy(gameObject, 1.5f);
+                Destroy(gameObject, 0.5f);
             }
         }
     }

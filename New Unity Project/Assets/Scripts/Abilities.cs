@@ -33,8 +33,8 @@ public class Abilities : MonoBehaviour
     public Sprite[] weaponsImages;
 
 
-    private int weaponSelect;
-    private int selectedWeapon;
+    public int weaponSelect;
+    public int selectedWeapon;
 
     public enum Weapons
     {
@@ -116,23 +116,23 @@ public class Abilities : MonoBehaviour
 
         for (int i = 0; i < weaponSelect; i++)
         {
-            selectedWeaponImage = weaponsImages[(i + 1)];
-            yield return new WaitForSeconds((0.5f * (i/2)));
+            selectedWeaponImage = weaponsImages[(i)];
+            yield return new WaitForSeconds((0.3f * (i/2)));
         }
         yield return new WaitForSeconds((1f));
         LeanTween.scale(ui.Weapon.gameObject, new Vector3(0.7f, 0.7f, 0.7f), 0.4f);
         yield return new WaitForSeconds((0.4f));
         LeanTween.scale(ui.Weapon.gameObject, new Vector3(0.6f, 0.6f, 0.6f), 0.4f);
 
-        if (selectedWeapon <= 3)
+        if (weaponSelect <= 3)
         {
             selectedWeapon = (weaponSelect);
         }
-        if (selectedWeapon >= 4 && selectedWeapon <= 6)
+        if (weaponSelect >= 4 && selectedWeapon <= 6)
         {
             selectedWeapon = (weaponSelect - 3);
         }
-        if (selectedWeapon >= 7 && selectedWeapon <= 9)
+        if (weaponSelect >= 7 && selectedWeapon <= 9)
         {
             selectedWeapon = (weaponSelect - 6);
         }
@@ -145,14 +145,14 @@ public class Abilities : MonoBehaviour
 
         else if ((int)Weapons.Rocket == selectedWeapon)
         {
-            selectedWeaponImage = weaponsImages[2];
+            selectedWeaponImage = weaponsImages[3];
             Ammo = 3;
             currentWeapon = Weapons.Rocket;
         }
 
         else if ((int)Weapons.Laser == selectedWeapon)
         {
-            selectedWeaponImage = weaponsImages[3];
+            selectedWeaponImage = weaponsImages[2];
             currentWeapon = Weapons.Laser;
         }
     }
