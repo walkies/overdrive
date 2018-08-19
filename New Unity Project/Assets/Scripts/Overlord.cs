@@ -71,9 +71,9 @@ public static class Overlord
     {
         currentScore++;
     }
-    public static void ScoreDestroyTarget()
+    public static void ScoreDestroyTarget(int bonus)
     {
-        currentScore = currentScore + (4000 * (scaleBonus/27));
+        currentScore = currentScore + (bonus * (scaleBonus/27));
     }
     public static void HighScoreUpdate()
     {

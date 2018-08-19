@@ -16,6 +16,15 @@ public class Health : MonoBehaviour
         {
             if (health <= 0)
             {
+                if (gameObject.CompareTag("Boss"))
+                {
+                    Overlord.ScoreDestroyTarget(4000);
+                }
+                else
+                {
+                    Overlord.ScoreDestroyTarget(1000);
+                }
+
                 aS.enabled = true;
                 L.enabled = true;
                 pS.SetActive(true);

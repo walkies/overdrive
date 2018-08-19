@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class CarsMovement : MonoBehaviour
 {
-
+    public int speed;
 	void Update ()
     {
-        transform.position -= transform.forward * (Time.deltaTime * 3); 
+        transform.position -= transform.forward * (Time.deltaTime * speed); 
 	}
 }
