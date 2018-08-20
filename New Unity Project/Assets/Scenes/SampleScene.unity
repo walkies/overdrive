@@ -3928,7 +3928,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.039215688}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.078431375}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -5365,7 +5365,7 @@ Prefab:
     - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
         type: 2}
       propertyPath: currentWeapon
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
         type: 2}

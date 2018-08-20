@@ -24,7 +24,7 @@ public class UI : MonoBehaviour
 
     public void Start()
     {
-        StartCoroutine("color");
+        InvokeRepeating("Color", 0, 0.2f);
     }
 
     public void Update()
@@ -58,16 +58,16 @@ public class UI : MonoBehaviour
         closeCallTimer = closeCallTimer + 0.8f;
     }
 
-    public IEnumerator color()
+    public void Color()
     {
-        crimeBonus.canvasRenderer.SetColor(Color.red);
-        yield return new WaitForSeconds(0.8f);
-        crimeBonus.canvasRenderer.SetColor(Color.blue);
+        Color newColor = new Color(Random.Range(0, 10), 0, Random.Range(0, 10), 1.8f);
+        crimeBonus.canvasRenderer.SetColor(newColor);
     }
+
     public IEnumerator text()
     {
         crimeBonus.gameObject.SetActive(true);
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2);
         crimeBonus.gameObject.SetActive(false);
     }
 }
