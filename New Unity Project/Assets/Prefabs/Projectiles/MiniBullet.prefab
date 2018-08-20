@@ -194,7 +194,7 @@ MonoBehaviour:
   rend: {fileID: 23606380143346536}
   rb: {fileID: 54322057996035028}
   l: {fileID: 1581862176257664}
-  damage: 2
+  damage: 3
   spin: 0
 --- !u!136 &136273966136765746
 CapsuleCollider:

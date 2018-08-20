@@ -26,7 +26,8 @@ public class Abilities : MonoBehaviour
     public AudioEffectSO laser;
     public LineRenderer lR;
     public Light chargeUp;
-
+    [HideInInspector]
+    public RaycastHit[] hits;
     [Header("Weapon Images")]
 
     public Sprite selectedWeaponImage;
@@ -47,7 +48,8 @@ public class Abilities : MonoBehaviour
     void Update()
     {
         if (currentWeapon == Weapons.Laser)
-        {
+        {   
+            hits = Physics.RaycastAll(weapons[2].transform.position, transform.forward, 400.0F);
             lR.SetPosition(0, weapons[2].transform.position);
         }
         Debug.Log(currentWeapon);
@@ -166,15 +168,12 @@ public class Abilities : MonoBehaviour
             chargeUp.range += 0.025f;
             yield return new WaitForSeconds(0.05f);
         }
-        RaycastHit[] hits;
-        hits = Physics.RaycastAll(weapons[2].transform.position, transform.forward, 3000.0F);
-
         for (int i = 0; i < hits.Length; i++)
         {
             if (hits[i].collider.gameObject.CompareTag("Boss") || hits[i].collider.gameObject.CompareTag("Obstacle"))
             {
                 RaycastHit hit = hits[i];
-                lR.SetPosition(1, (weapons[2].transform.position + new Vector3 (weapons[2].transform.position.x, weapons[2].transform.position.y, weapons[2].transform.position.z - 6000)));
+                lR.SetPosition(1, (weapons[2].transform.position + new Vector3 (weapons[2].transform.position.x, weapons[2].transform.position.y, weapons[2].transform.position.z - 400)));
                 lR.enabled = true;
                 hit.transform.GetComponent<Health>().health = hit.transform.GetComponent<Health>().health - 3;
             }
@@ -184,7 +183,18 @@ public class Abilities : MonoBehaviour
             lR.startWidth += 0.01f;
             yield return new WaitForSeconds(0.05f);
         }
+        for (int i = 0; i < hits.Length; i++)
+        {
+            if (hits[i].collider.gameObject.CompareTag("Boss") || hits[i].collider.gameObject.CompareTag("Obstacle"))
+            {
+                RaycastHit hit = hits[i];
+                lR.SetPosition(1, (weapons[2].transform.position + new Vector3(weapons[2].transform.position.x, weapons[2].transform.position.y, weapons[2].transform.position.z - 400)));
+                lR.enabled = true;
+                hit.transform.GetComponent<Health>().health = hit.transform.GetComponent<Health>().health - 3;
+            }
+        }
         yield return new WaitForSeconds(1f);
+
         for (int i = 0; i < 20; i++)
         {
             lR.startWidth -= 0.01f;

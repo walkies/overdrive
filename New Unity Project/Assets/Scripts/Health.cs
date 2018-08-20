@@ -25,17 +25,17 @@ public class Health : MonoBehaviour
                 if (gameObject.CompareTag("Boss"))
                 {
                     uI.StartCoroutine("text");
-                    Overlord.ScoreDestroyTarget(200);
+                    Overlord.ScoreDestroyTarget(300);
                 }
                 else
                 {
-                    Overlord.ScoreDestroyTarget(50);
+                    Overlord.ScoreDestroyTarget(40);
                 }
 
                 aS.enabled = true;
                 L.enabled = true;
                 pS.SetActive(true);
-                Destroy(gameObject, 0.5f);
+                Destroy(gameObject, 0.1f);
             }
         }
     }

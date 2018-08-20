@@ -24,8 +24,8 @@ public class BossMarker : MonoBehaviour
             }
             else
             {
-                target.transform.Rotate(Vector3.right * (20 * Time.deltaTime));
-                target.transform.localScale -= new Vector3(0.00012F, 0.00012f, 0.00012f);
+                target.transform.Rotate(Vector3.forward * (20 * Time.deltaTime));
+                target.transform.localScale -= new Vector3(0.0002F, 0.0002f, 0.0002f);
             }
         }
     }
