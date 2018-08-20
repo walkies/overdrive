@@ -73,6 +73,7 @@ public class Abilities : MonoBehaviour
         }
         else if (currentWeapon == Weapons.Minigun)
         {
+            Overlord.weapUse++;
             weapons[0].SetActive(true);
             StartCoroutine("FireMinigun");
         }
@@ -80,6 +81,7 @@ public class Abilities : MonoBehaviour
         {
             if (Ammo > 0)
             {
+                Overlord.weapUse++;
                 rocket.Play();
                 Instantiate(weapons[1], transform.position, Quaternion.identity);
                 Ammo--;
@@ -93,6 +95,7 @@ public class Abilities : MonoBehaviour
         }
         else if (currentWeapon == Weapons.Laser)
         {
+            Overlord.weapUse++;
             weapons[2].SetActive(true);
             StartCoroutine("FireLaser");
         }
@@ -100,7 +103,7 @@ public class Abilities : MonoBehaviour
 
     public IEnumerator FireMinigun()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
         //replace with tween
         mG.InvokeRepeating("Fire", 0, 0.1f);
         yield return new WaitForSeconds(5);
@@ -166,7 +169,7 @@ public class Abilities : MonoBehaviour
         for (int i = 0; i < 20; i++)
         {
             chargeUp.range += 0.025f;
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(0.025f);
         }
         for (int i = 0; i < hits.Length; i++)
         {
@@ -199,7 +202,7 @@ public class Abilities : MonoBehaviour
         {
             lR.startWidth -= 0.01f;
             chargeUp.range -= 0.025f;
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(0.025f);
         }
         StopCoroutine("FireLaser");
         lR.enabled = false;

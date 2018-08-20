@@ -17,7 +17,7 @@ public class PowerUpScore : MonoBehaviour
             {
                 ab.StartCoroutine("RandomWeapon");
                 lowerScore = lowerScore + 20000;
-                upperScore = upperScore + 30000;
+                upperScore = upperScore + 40000;
             }
             else
             {

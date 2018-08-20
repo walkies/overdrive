@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DamagePlayer : MonoBehaviour
 {
@@ -24,10 +25,11 @@ public class DamagePlayer : MonoBehaviour
     }
     public void Update()
     {
-        if (timer == true && uI.timer >= currentTime)
+        if (timer == true && Overlord.timer >= currentTime)
         {
             Time.timeScale = 0;
             endScreen.transform.GetChild(0).gameObject.SetActive(true);
+            SceneManager.LoadScene("EndScore");
         }
     }
 
@@ -45,7 +47,7 @@ public class DamagePlayer : MonoBehaviour
                 mainCam.transform.parent = null;
                 LeanTween.move(mainCam.gameObject, new Vector3(transform.position.x, transform.position.y + 1, transform.position.z - 15), (15/pM.speed));
                 timer = true;
-                currentTime = uI.timer + 3;
+                currentTime = Overlord.timer + 2;
             }
         }
 

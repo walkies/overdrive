@@ -17,6 +17,11 @@ public class PlayerMovement : MonoBehaviour
     void Awake()
     {
         Overlord.currentScore = 0;
+        Overlord.timer = 0;
+        Overlord.weapUse = 0;
+        Overlord.crimesSolved = 0;
+        Overlord.Evasive = 0;
+        Overlord.casual = 0;
     }
 
     void Start()

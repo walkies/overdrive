@@ -8,7 +8,6 @@ public class UI : MonoBehaviour
     #region Variables
     public Abilities aB;
     public PlayerMovement pM;
-    public float timer;
     public float closeCallTimer;
     public int multiplier = 0;
     public Text inGameTime;
@@ -16,7 +15,6 @@ public class UI : MonoBehaviour
     public Text ScoreLaneBonus;
     public Text closeCall;
     public Text HighScore;
-    public Text EndScore;
     public Text ScaleBonus;
     public Text crimeBonus;
     public Image Weapon;
@@ -39,13 +37,11 @@ public class UI : MonoBehaviour
         {
             closeCallTimer -= Time.deltaTime;
         }
-
-        timer = Time.fixedUnscaledTime;
-        inGameTime.text = (" " + timer.ToString("F4"));
+        Overlord.timer = Time.fixedUnscaledTime;
+        inGameTime.text = (" " + Overlord.timer.ToString("F4"));
         inGameScore.text = (" " + Overlord.currentScore.ToString());
         closeCall.text = ("Pass Bonus x" + multiplier.ToString());
         HighScore.text = (" " + PlayerPrefs.GetInt("HS"));
-        EndScore.text = (" " + Overlord.currentScore.ToString());
         ScaleBonus.text = ("Bonus Multiplier: x" + Overlord.scaleBonus/27);
         Weapon.sprite = aB.selectedWeaponImage;
     }
@@ -54,8 +50,9 @@ public class UI : MonoBehaviour
     {
         multiplier++;
         closeCall.gameObject.SetActive(true);
+        Overlord.MultiUpdate(multiplier);
         Overlord.ScoreCloseCall(multiplier);
-        closeCallTimer = closeCallTimer + 0.8f;
+        closeCallTimer = closeCallTimer + 0.78f;
     }
 
     public void Color()

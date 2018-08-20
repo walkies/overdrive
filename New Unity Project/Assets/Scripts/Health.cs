@@ -10,6 +10,7 @@ public class Health : MonoBehaviour
     public GameObject pS;
     public AudioSource aS;
     public Light L;
+    public bool doOnce;
 
     public void Start()
     {
@@ -22,20 +23,26 @@ public class Health : MonoBehaviour
         {
             if (health <= 0)
             {
-                if (gameObject.CompareTag("Boss"))
+                if (doOnce == false)
                 {
-                    uI.StartCoroutine("text");
-                    Overlord.ScoreDestroyTarget(300);
+                    if (gameObject.CompareTag("Boss"))
+                    {
+                        uI.StartCoroutine("text");
+                        Overlord.crimesSolved++;
+                        Overlord.ScoreDestroyTarget(2000);
+                        doOnce = true;
+                    }
+                    else
+                    {
+                        Overlord.casual++;
+                        Overlord.ScoreDestroyTarget(200);
+                        doOnce = true;
+                    }
                 }
-                else
-                {
-                    Overlord.ScoreDestroyTarget(40);
-                }
-
                 aS.enabled = true;
                 L.enabled = true;
                 pS.SetActive(true);
-                Destroy(gameObject, 0.1f);
+                Destroy(gameObject, 0.2f);
             }
         }
     }

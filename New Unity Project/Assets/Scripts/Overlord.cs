@@ -15,6 +15,13 @@ public static class Overlord
     public static int currentScore = 0;
     public static int HighScore;
 
+    //End UI
+    public static float timer;
+    public static int weapUse;
+    public static int Evasive;
+    public static int casual;
+    public static int crimesSolved;
+
     public static void updateRoadIndex()
     {
         if (roadAggression < 184)
@@ -49,6 +56,14 @@ public static class Overlord
         {
             rightWallAggression++;
             rightWallAggression++;
+        }
+    }
+
+    public static void MultiUpdate(int multiplier)
+    {
+       if(multiplier > Evasive)
+        {
+            Evasive = multiplier;
         }
     }
 
