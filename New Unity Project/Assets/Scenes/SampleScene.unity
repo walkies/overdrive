@@ -5365,7 +5365,7 @@ Prefab:
     - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
         type: 2}
       propertyPath: currentWeapon
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
         type: 2}
@@ -6361,6 +6361,30 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 49a74f45890b7034a8ea7bce48b6da6a,
         type: 3}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: minigun
+      value: 
+      objectReference: {fileID: 11400000, guid: a1b5922923d614b45910841a329c2d9e,
+        type: 2}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: rocket
+      value: 
+      objectReference: {fileID: 11400000, guid: 58d33359238c2f7448ff5d7eb3153c91,
+        type: 2}
+    - target: {fileID: 114360322380415776, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: laser
+      value: 
+      objectReference: {fileID: 11400000, guid: 6a40da4203b3e5a418bfb635369d2fbd,
+        type: 2}
+    - target: {fileID: 114158204816618004, guid: 160b230bcb814104d9e304d3f7c58885,
+        type: 2}
+      propertyPath: minigun
+      value: 
+      objectReference: {fileID: 11400000, guid: a1b5922923d614b45910841a329c2d9e,
+        type: 2}
     m_RemovedComponents:
     - {fileID: 114142869106694978, guid: 160b230bcb814104d9e304d3f7c58885, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 160b230bcb814104d9e304d3f7c58885, type: 2}

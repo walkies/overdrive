@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class Abilities : MonoBehaviour
 {
     [Header("References")]
-
     public UI ui;
     public PlayerMovement pM;
 
@@ -16,14 +15,15 @@ public class Abilities : MonoBehaviour
 
     public GameObject[] weapons;
     [Header("Mini Gun")]
-
     public Minigun mG;
 
     [Header("Rocket")]
+    public AudioEffectSO rocket;
     public int Ammo;
     public Sprite[] rocketImages;
 
     [Header("Laser")]
+    public AudioEffectSO laser;
     public LineRenderer lR;
     public Light chargeUp;
 
@@ -78,6 +78,7 @@ public class Abilities : MonoBehaviour
         {
             if (Ammo > 0)
             {
+                rocket.Play();
                 Instantiate(weapons[1], transform.position, Quaternion.identity);
                 Ammo--;
                 selectedWeaponImage = rocketImages[Ammo];
@@ -159,6 +160,7 @@ public class Abilities : MonoBehaviour
 
     public IEnumerator FireLaser()
     {
+        laser.Play();
         for (int i = 0; i < 20; i++)
         {
             chargeUp.range += 0.025f;
