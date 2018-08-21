@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
     private float timeCount;
     public float lockOut;
     public float oneLaneBonus;
+    public GameObject leftB;
+    public GameObject rightB;
 
     void Awake()
     {
@@ -49,6 +51,17 @@ public class PlayerMovement : MonoBehaviour
             lB.Switch = false;
             uI.ScoreLaneBonus.gameObject.SetActive(false);
             oneLaneBonus = 0;
+        }
+        #endregion
+
+        #region blinkers
+        if (currentLane == 2 && speed > 8 && speed < 16)
+        {
+            StartCoroutine("LeftIndi");
+        }
+        if (currentLane == 0 && speed > 8 && speed < 20)
+        {
+            StartCoroutine("RightIndi");
         }
         #endregion
 
@@ -217,6 +230,27 @@ public class PlayerMovement : MonoBehaviour
         ///<summary>
         /// speed is equal to accleration over time
         ///</summary>
+    }
+    public IEnumerator LeftIndi()
+    {
+        leftB.SetActive(true);
+        yield return new WaitForSeconds(0.8f);
+        leftB.SetActive(false);
+        yield return new WaitForSeconds(0.8f);
+        leftB.SetActive(true);
+        yield return new WaitForSeconds(0.8f);
+        leftB.SetActive(false);
+    }
+
+    public IEnumerator RightIndi()
+    {
+        rightB.SetActive(true);
+        yield return new WaitForSeconds(0.8f);
+        rightB.SetActive(false);
+        yield return new WaitForSeconds(0.8f);
+        rightB.SetActive(true);
+        yield return new WaitForSeconds(0.8f);
+        rightB.SetActive(false);
     }
 }
 

@@ -218,7 +218,7 @@ public class EndUI : MonoBehaviour
         {
             timeTotal = 4;
         }
-        else if (Overlord.timer >= 360)
+        else if (Overlord.timer >= 300)
         {
             timeTotal = 5;
         }
@@ -246,7 +246,7 @@ public class EndUI : MonoBehaviour
         {
             weapTotal = 4;
         }
-        else if (Overlord.weapUse >= 6)
+        else if (Overlord.weapUse >= 5)
         {
             weapTotal = 5;
         }
@@ -274,7 +274,7 @@ public class EndUI : MonoBehaviour
         {
             crimeTotal = 4;
         }
-        else if (Overlord.crimesSolved >= 6)
+        else if (Overlord.crimesSolved >= 5)
         {
             crimeTotal = 5;
         }
@@ -302,7 +302,7 @@ public class EndUI : MonoBehaviour
         {
             evasTotal = 4;
         }
-        else if (Overlord.Evasive >= 28)
+        else if (Overlord.Evasive >= 23)
         {
             evasTotal = 5;
         }
@@ -330,7 +330,7 @@ public class EndUI : MonoBehaviour
         {
             civilTotal = 4;
         }
-        else if (Overlord.casual >= 10)
+        else if (Overlord.casual >= 8)
         {
             civilTotal = 5;
         }
