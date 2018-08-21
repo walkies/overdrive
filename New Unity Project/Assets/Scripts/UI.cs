@@ -52,7 +52,7 @@ public class UI : MonoBehaviour
         closeCall.gameObject.SetActive(true);
         Overlord.MultiUpdate(multiplier);
         Overlord.ScoreCloseCall(multiplier);
-        closeCallTimer = closeCallTimer + 0.78f;
+        closeCallTimer = closeCallTimer + 0.76f;
     }
 
     public void Color()

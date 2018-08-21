@@ -75,7 +75,7 @@ public class EndUI : MonoBehaviour
         time.gameObject.SetActive(true);
         shot.Play();
         shot.pitch += 0.02f;
-        for (int i = 0; i < timeTotal; i++)
+        for (int i = 0; i < (timeTotal +1); i++)
         {
             timeBadge.sprite = TimeB[i];
             shot.Play();
@@ -87,7 +87,7 @@ public class EndUI : MonoBehaviour
         weapUsed.gameObject.SetActive(true);
         shot.Play();
         shot.pitch += 0.02f;
-        for (int i = 0; i < weapTotal; i++)
+        for (int i = 0; i < (weapTotal + 1); i++)
         {
             weapBadge.sprite = WeapB[i];
             shot.Play();
@@ -99,7 +99,7 @@ public class EndUI : MonoBehaviour
         crimeSolved.gameObject.SetActive(true);
         shot.Play();
         shot.pitch += 0.02f;
-        for (int i = 0; i < crimeTotal; i++)
+        for (int i = 0; i < (crimeTotal + 1); i++)
         {
             crimeBadge.sprite = CrimeB[i];
             shot.Play();
@@ -111,7 +111,7 @@ public class EndUI : MonoBehaviour
         evasive.gameObject.SetActive(true);
         shot.Play();
         shot.pitch += 0.02f;
-        for (int i = 0; i < evasTotal; i++)
+        for (int i = 0; i < (evasTotal + 1); i++)
         {
             evasBadge.sprite = EvasB[i];
             shot.Play();
@@ -123,7 +123,7 @@ public class EndUI : MonoBehaviour
         Casual.gameObject.SetActive(true);
         shot.Play();
         shot.pitch += 0.02f;
-        for (int i = 0; i < civilTotal; i++)
+        for (int i = 0; i < (civilTotal + 1); i++)
         {
             civBadge.sprite = CivilB[i];
             shot.Play();
@@ -141,7 +141,7 @@ public class EndUI : MonoBehaviour
             shot.Play();
             shot.pitch += 0.02f;
             Overlord.timer--;
-            Overlord.currentScore += 100;
+            Overlord.currentScore += 200;
             yield return new WaitForSeconds(0.01f);
         }
         yield return new WaitForSeconds(1);
@@ -151,7 +151,7 @@ public class EndUI : MonoBehaviour
             shot.Play();
             shot.pitch += 0.02f;
             Overlord.weapUse--;
-            Overlord.currentScore += 1000;
+            Overlord.currentScore += 5000;
             yield return new WaitForSeconds(0.05f);
         }
         yield return new WaitForSeconds(1);
@@ -171,7 +171,7 @@ public class EndUI : MonoBehaviour
             shot.Play();
             shot.pitch += 0.02f;
             Overlord.Evasive--;
-            Overlord.currentScore += 1000;
+            Overlord.currentScore += 2000;
             yield return new WaitForSeconds(0.05f);
         }
         yield return new WaitForSeconds(1);
@@ -366,13 +366,21 @@ public class EndUI : MonoBehaviour
         {
             endresult.text = "INSANE";
         }
-        else if (Overlord.currentScore <= 1000000)
+        else if (Overlord.currentScore <= 1200000)
         {
             endresult.text = "LEGENDARY";
+        }
+        else if (Overlord.currentScore <= 1600000)
+        {
+            endresult.text = "RENEGADE";
         }
         else if (Overlord.currentScore <= 2000000)
         {
             endresult.text = "MAX 0'VERDRIVE";
+        }
+        else if (Overlord.currentScore >= 3000000)
+        {
+            endresult.text = "MAXXX 0'VERDRIVE";
         }
     }
 }
