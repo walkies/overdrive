@@ -34,6 +34,10 @@ public class EndUI : MonoBehaviour
     private int civilTotal;
 
     public AudioSource shot;
+    public GameObject stamp;
+    public Text endresult;
+    public GameObject endresultbox;
+    public AudioSource stamped;
 
     void Awake()
     {
@@ -181,9 +185,15 @@ public class EndUI : MonoBehaviour
             yield return new WaitForSeconds(0.05f);
         }
         #endregion
-
         yield return new WaitForSeconds(1);
-        //Stamp
+        LeanTween.move(stamp, new Vector3(stamp.transform.position.x, stamp.transform.position.y, stamp.transform.position.z + 0.7f), 1.2f);
+        yield return new WaitForSeconds(1.1f);
+        stamped.Play();
+        ScoreToStamp();    
+        endresultbox.SetActive(true);
+        yield return new WaitForSeconds(1);
+        LeanTween.move(stamp, new Vector3(stamp.transform.position.x, stamp.transform.position.y, stamp.transform.position.z - 0.7f), 1.2f);
+        yield return new WaitForSeconds(2);
     }
 
     public void TimeToBadge()
@@ -328,6 +338,41 @@ public class EndUI : MonoBehaviour
 
     public void ScoreToStamp()
     {
-
+        if (Overlord.currentScore <= 10000)
+        {
+            endresult.text = "CADET";
+        }
+        else if (Overlord.currentScore <= 40000)
+        {
+            endresult.text = "ROOKIE";
+        }
+        else if (Overlord.currentScore <= 80000)
+        {
+            endresult.text = "REGULAR COP";
+        }
+        else if (Overlord.currentScore <= 100000)
+        {
+            endresult.text = "FUTURE COP";
+        }
+        else if (Overlord.currentScore <= 200000)
+        {
+            endresult.text = "ROBOCOP";
+        }
+        else if (Overlord.currentScore <= 400000)
+        {
+            endresult.text = "BADASS";
+        }
+        else if (Overlord.currentScore <= 800000)
+        {
+            endresult.text = "INSANE";
+        }
+        else if (Overlord.currentScore <= 1000000)
+        {
+            endresult.text = "LEGENDARY";
+        }
+        else if (Overlord.currentScore <= 2000000)
+        {
+            endresult.text = "MAX 0'VERDRIVE";
+        }
     }
 }
