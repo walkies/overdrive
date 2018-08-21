@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -11,10 +12,12 @@ public class Health : MonoBehaviour
     public AudioSource aS;
     public Light L;
     public bool doOnce;
+    public GameObject endScreen;
 
     public void Start()
     {
-        uI = FindObjectOfType<UI>(); 
+        uI = FindObjectOfType<UI>();
+        endScreen = GameObject.FindGameObjectWithTag("EndPanel");
     }
 
     public void Update()
@@ -45,6 +48,21 @@ public class Health : MonoBehaviour
                 Destroy(gameObject, 0.2f);
             }
         }
+        else
+        {
+            if (health <= 0)
+            {
+                StartCoroutine("death");
+            }
+        }
+    }
+    public IEnumerator death()
+    {
+        yield return new WaitForSeconds(4); 
+        endScreen.transform.GetChild(0).gameObject.SetActive(true);
+        yield return new WaitForSeconds(2);
+        Time.timeScale = 0;
+        SceneManager.LoadScene("EndScore");
     }
 }
 

@@ -49,7 +49,7 @@ public class Abilities : MonoBehaviour
     {
         if (currentWeapon == Weapons.Laser)
         {   
-            hits = Physics.RaycastAll(weapons[2].transform.position, transform.forward, 400.0F);
+            hits = Physics.RaycastAll(weapons[2].transform.position, transform.forward, 500.0F);
             lR.SetPosition(0, weapons[2].transform.position);
         }
         Debug.Log(currentWeapon);
@@ -176,7 +176,7 @@ public class Abilities : MonoBehaviour
             if (hits[i].collider.gameObject.CompareTag("Boss") || hits[i].collider.gameObject.CompareTag("Obstacle"))
             {
                 RaycastHit hit = hits[i];
-                lR.SetPosition(1, (weapons[2].transform.position + new Vector3 (weapons[2].transform.position.x, weapons[2].transform.position.y, weapons[2].transform.position.z - 400)));
+                lR.SetPosition(1, (weapons[2].transform.position + new Vector3 (weapons[2].transform.position.x, weapons[2].transform.position.y, weapons[2].transform.position.z - 500)));
                 lR.enabled = true;
                 hit.transform.GetComponent<Health>().health = hit.transform.GetComponent<Health>().health - 3;
             }
@@ -191,7 +191,7 @@ public class Abilities : MonoBehaviour
             if (hits[i].collider.gameObject.CompareTag("Boss") || hits[i].collider.gameObject.CompareTag("Obstacle"))
             {
                 RaycastHit hit = hits[i];
-                lR.SetPosition(1, (weapons[2].transform.position + new Vector3(weapons[2].transform.position.x, weapons[2].transform.position.y, weapons[2].transform.position.z - 400)));
+                lR.SetPosition(1, (weapons[2].transform.position + new Vector3(weapons[2].transform.position.x, weapons[2].transform.position.y, weapons[2].transform.position.z - 500)));
                 lR.enabled = true;
                 hit.transform.GetComponent<Health>().health = hit.transform.GetComponent<Health>().health - 3;
             }

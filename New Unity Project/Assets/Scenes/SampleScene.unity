@@ -1401,7 +1401,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.76862746}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -4144,7 +4144,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aB: {fileID: 1904775916}
   pM: {fileID: 453403388}
-  timer: 0
   closeCallTimer: 0
   multiplier: 1
   inGameTime: {fileID: 204116744}
@@ -4152,7 +4151,6 @@ MonoBehaviour:
   ScoreLaneBonus: {fileID: 449737852}
   closeCall: {fileID: 1023608134}
   HighScore: {fileID: 1957228858}
-  EndScore: {fileID: 0}
   ScaleBonus: {fileID: 1037523517}
   crimeBonus: {fileID: 1357373319}
   Weapon: {fileID: 241981505}
@@ -6411,6 +6409,8 @@ MonoBehaviour:
   pS: {fileID: 0}
   aS: {fileID: 0}
   L: {fileID: 0}
+  doOnce: 0
+  endScreen: {fileID: 0}
 --- !u!114 &1904775918 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114158204816618004, guid: 160b230bcb814104d9e304d3f7c58885,

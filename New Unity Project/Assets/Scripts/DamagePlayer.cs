@@ -12,7 +12,7 @@ public class DamagePlayer : MonoBehaviour
     public AudioEffectSO aSO;
     public AudioEffectSO crash;
     public Health hp;
-    private float currentTime;
+    public float currentTime;
     private bool timer = false;
 
     void Start ()
@@ -23,16 +23,6 @@ public class DamagePlayer : MonoBehaviour
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         endScreen = GameObject.FindGameObjectWithTag("EndPanel");
     }
-    public void Update()
-    {
-        if (timer == true && Overlord.timer >= currentTime)
-        {
-            Time.timeScale = 0;
-            endScreen.transform.GetChild(0).gameObject.SetActive(true);
-            SceneManager.LoadScene("EndScore");
-        }
-    }
-
 
     public void OnTriggerEnter(Collider col)
     {
