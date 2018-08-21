@@ -39,7 +39,7 @@ public class DamagePlayer : MonoBehaviour
         if (col.gameObject.CompareTag("Player"))
         {
             hp.health--;
-            if (hp.health <= 0)
+            if (timer == false && hp.health <= 0)
             {
                 Destroy(col.gameObject.GetComponentInParent<Player>());
                 Destroy(col.gameObject.GetComponentInParent<PlayerMovement>());

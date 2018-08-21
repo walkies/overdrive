@@ -12,11 +12,42 @@ public class EndUI : MonoBehaviour
     public Text evasive;
     public Text Casual;
 
-    public AudioEffectSO shot;
+    [Header ("Time")]
+    public Image timeBadge;
+    public Sprite[] TimeB;
+    private int timeTotal;
+    [Header("Weapon")]
+    public Image weapBadge;
+    public Sprite[] WeapB;
+    private int weapTotal;
+    [Header("Crime")]
+    public Image crimeBadge;
+    public Sprite[] CrimeB;
+    private int crimeTotal;
+    [Header("Evasive")]
+    public Image evasBadge;
+    public Sprite[] EvasB;
+    private int evasTotal;
+    [Header("Civil")]
+    public Image civBadge;
+    public Sprite[] CivilB;
+    private int civilTotal;
+
+    public AudioSource shot;
+
+    void Awake()
+    {
+        Time.timeScale = 1;    
+    }
 
     void Start()
     {
-        StartCoroutine("EndRoutine");
+        TimeToBadge();
+        WeapToBadge();
+        CrimeToBadge();
+        EvasToBadge();
+        CivilToBadge();
+        StartCoroutine("EndRoutine");    
     }
 
     void Update ()
@@ -31,27 +62,272 @@ public class EndUI : MonoBehaviour
 
     public IEnumerator EndRoutine()
     {
-        yield return new WaitForSeconds(1);
+        #region DisplayScore
+        yield return new WaitForSeconds(2);
         score.gameObject.SetActive(true);
-        //badges
+        shot.Play();
+        shot.pitch += 0.02f;
         yield return new WaitForSeconds(1);
         time.gameObject.SetActive(true);
-        //badges
+        shot.Play();
+        shot.pitch += 0.02f;
+        for (int i = 0; i < timeTotal; i++)
+        {
+            timeBadge.sprite = TimeB[i];
+            shot.Play();
+            shot.pitch += 0.02f;
+            yield return new WaitForSeconds(0.5f);
+        }
+
         yield return new WaitForSeconds(1);
         weapUsed.gameObject.SetActive(true);
-        //badges
+        shot.Play();
+        shot.pitch += 0.02f;
+        for (int i = 0; i < weapTotal; i++)
+        {
+            weapBadge.sprite = WeapB[i];
+            shot.Play();
+            shot.pitch += 0.02f;
+            yield return new WaitForSeconds(0.5f);
+        }
+
         yield return new WaitForSeconds(1);
         crimeSolved.gameObject.SetActive(true);
-        //badges
-        yield return new WaitForSeconds(1);
-        Casual.gameObject.SetActive(true);
-        //badges
+        shot.Play();
+        shot.pitch += 0.02f;
+        for (int i = 0; i < crimeTotal; i++)
+        {
+            crimeBadge.sprite = CrimeB[i];
+            shot.Play();
+            shot.pitch += 0.02f;
+            yield return new WaitForSeconds(0.5f);
+        }
+
         yield return new WaitForSeconds(1);
         evasive.gameObject.SetActive(true);
-        //badges
+        shot.Play();
+        shot.pitch += 0.02f;
+        for (int i = 0; i < evasTotal; i++)
+        {
+            evasBadge.sprite = EvasB[i];
+            shot.Play();
+            shot.pitch += 0.02f;
+            yield return new WaitForSeconds(0.5f);
+        }
+
+        yield return new WaitForSeconds(1);
+        Casual.gameObject.SetActive(true);
+        shot.Play();
+        shot.pitch += 0.02f;
+        for (int i = 0; i < civilTotal; i++)
+        {
+            civBadge.sprite = CivilB[i];
+            shot.Play();
+            shot.pitch += 0.02f;
+            yield return new WaitForSeconds(0.5f);
+        }
+        #endregion
+
+        #region DrainScore
+        yield return new WaitForSeconds(1);
+        int time2 = Mathf.RoundToInt(Overlord.timer);
+        Overlord.timer = Mathf.RoundToInt(Overlord.timer);
+        for (int i = 0; i < time2; i++)
+        {
+            shot.Play();
+            shot.pitch += 0.02f;
+            Overlord.timer--;
+            Overlord.currentScore += 100;
+            yield return new WaitForSeconds(0.01f);
+        }
+        yield return new WaitForSeconds(1);
+        float weap = Overlord.weapUse;
+        for (int i = 0; i < weap; i++)
+        {
+            shot.Play();
+            shot.pitch += 0.02f;
+            Overlord.weapUse--;
+            Overlord.currentScore += 1000;
+            yield return new WaitForSeconds(0.05f);
+        }
+        yield return new WaitForSeconds(1);
+        float crimes = Overlord.crimesSolved;
+        for (int i = 0; i < crimes; i++)
+        {
+            shot.Play();
+            shot.pitch += 0.02f;
+            Overlord.crimesSolved--;
+            Overlord.currentScore += 10000;
+            yield return new WaitForSeconds(0.05f);
+        }
+        yield return new WaitForSeconds(1);
+        float evas = Overlord.Evasive;
+        for (int i = 0; i < evas; i++)
+        {
+            shot.Play();
+            shot.pitch += 0.02f;
+            Overlord.Evasive--;
+            Overlord.currentScore += 1000;
+            yield return new WaitForSeconds(0.05f);
+        }
+        yield return new WaitForSeconds(1);
+        float civil = Overlord.casual;
+        for (int i = 0; i < civil; i++)
+        {
+            shot.Play();
+            shot.pitch += 0.02f;
+            Overlord.casual--;
+            Overlord.currentScore -= 1000;
+            yield return new WaitForSeconds(0.05f);
+        }
+        #endregion
+
         yield return new WaitForSeconds(1);
         //Stamp
     }
 
+    public void TimeToBadge()
+    {
+        if (Overlord.timer < 60)
+        {
+            timeTotal = 0;
+        }
+        else if (Overlord.timer < 120)
+        {
+            timeTotal = 1;
+        }
+        else if (Overlord.timer < 180)
+        {
+            timeTotal = 2;
+        }
+        else if (Overlord.timer < 240)
+        {
+            timeTotal = 3;
+        }
+        else if (Overlord.timer < 300)
+        {
+            timeTotal = 4;
+        }
+        else if (Overlord.timer >= 360)
+        {
+            timeTotal = 5;
+        }
+    }
 
+    public void WeapToBadge()
+    {
+        if (Overlord.weapUse < 1)
+        {
+            weapTotal = 0;
+        }
+        else if (Overlord.weapUse < 2)
+        {
+            weapTotal = 1;
+        }
+        else if (Overlord.weapUse < 3)
+        {
+            weapTotal = 2;
+        }
+        else if (Overlord.weapUse < 4)
+        {
+            weapTotal = 3;
+        }
+        else if (Overlord.weapUse < 5)
+        {
+            weapTotal = 4;
+        }
+        else if (Overlord.weapUse >= 6)
+        {
+            weapTotal = 5;
+        }
+    }
+
+    public void CrimeToBadge()
+    {
+        if (Overlord.crimesSolved < 1)
+        {
+            crimeTotal = 0;
+        }
+        else if (Overlord.crimesSolved < 2)
+        {
+            crimeTotal = 1;
+        }
+        else if (Overlord.crimesSolved < 3)
+        {
+            crimeTotal = 2;
+        }
+        else if (Overlord.crimesSolved < 4)
+        {
+            crimeTotal = 3;
+        }
+        else if (Overlord.crimesSolved < 5)
+        {
+            crimeTotal = 4;
+        }
+        else if (Overlord.crimesSolved >= 6)
+        {
+            crimeTotal = 5;
+        }
+    }
+
+    public void EvasToBadge()
+    {
+        if (Overlord.Evasive < 3)
+        {
+            evasTotal = 0;
+        }
+        else if (Overlord.Evasive < 8)
+        {
+            evasTotal = 1;
+        }
+        else if (Overlord.Evasive < 13)
+        {
+            evasTotal = 2;
+        }
+        else if (Overlord.Evasive < 18)
+        {
+            evasTotal = 3;
+        }
+        else if (Overlord.Evasive < 23)
+        {
+            evasTotal = 4;
+        }
+        else if (Overlord.Evasive >= 28)
+        {
+            evasTotal = 5;
+        }
+    }
+
+    public void CivilToBadge()
+    {
+        if (Overlord.casual < 1)
+        {
+            civilTotal = 0;
+        }
+        else if (Overlord.casual < 2)
+        {
+            civilTotal = 1;
+        }
+        else if (Overlord.casual < 3)
+        {
+            civilTotal = 2;
+        }
+        else if (Overlord.casual < 4)
+        {
+            civilTotal = 3;
+        }
+        else if (Overlord.casual < 8)
+        {
+            civilTotal = 4;
+        }
+        else if (Overlord.casual >= 10)
+        {
+            civilTotal = 5;
+        }
+    }
+
+    public void ScoreToStamp()
+    {
+
+    }
 }
